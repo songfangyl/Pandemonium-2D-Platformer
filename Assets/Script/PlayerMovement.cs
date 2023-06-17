@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 mousePos;
     private float directionX = 0f;
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private InputAction moveAction;
+    [SerializeField] private InputAction jumpAction;
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
     [SerializeField] private Camera cam;
@@ -41,31 +44,41 @@ public class PlayerMovement : MonoBehaviour
         sprint();
         animationUpdate();
         crouch();
+        if (isGround()) {
+            Debug.Log("HHHHHHHHHHHHHH");
+        }
     }
 
+    public bool isMoving() {
+        return directionX != 0;
+    }
+
+    public float airSpeedY() {
+        return rb.velocity.y;
+    }
     private void animationUpdate() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        MovementState state;
-        if (directionX > 0)
-        {
-            state = MovementState.running;
-        } 
-        else if (directionX == 0) 
-        {
-            state = MovementState.idle;
-        }
-        else 
-        {
-            state = MovementState.running;
+        // MovementState state;
+        // if (directionX > 0)
+        // {
+        //     state = MovementState.running;
+        // } 
+        // else if (directionX == 0) 
+        // {
+        //     state = MovementState.idle;
+        // }
+        // else 
+        // {
+        //     state = MovementState.running;
             
-        }
+        // }
 
-        if (rb.velocity.y > .1f) {
-            state = MovementState.jumping;
-        } else if (rb.velocity.y < -.1f) {
-            state = MovementState.falling;
-        }
-        anim.SetInteger("state", (int) state);
+        // if (rb.velocity.y > .1f) {
+        //     state = MovementState.jumping;
+        // } else if (rb.velocity.y < -.1f) {
+        //     state = MovementState.falling;
+        // }
+        // anim.SetInteger("state", (int) state);
         if (mousePos.x >= rb.position.x) {
             sp.flipX = false;
         } else {
@@ -73,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    private bool isGround() 
+    public bool isGround() 
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
