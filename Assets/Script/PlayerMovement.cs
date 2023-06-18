@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Bounds crouchBound;
     private Vector2 mousePos;
     private float directionX = 0f;
+
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private InputAction moveAction;
     [SerializeField] private InputAction jumpAction;
@@ -44,9 +45,6 @@ public class PlayerMovement : MonoBehaviour
         sprint();
         animationUpdate();
         crouch();
-        if (isGround()) {
-            Debug.Log("HHHHHHHHHHHHHH");
-        }
     }
 
     public bool isMoving() {
@@ -58,27 +56,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void animationUpdate() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        // MovementState state;
-        // if (directionX > 0)
-        // {
-        //     state = MovementState.running;
-        // } 
-        // else if (directionX == 0) 
-        // {
-        //     state = MovementState.idle;
-        // }
-        // else 
-        // {
-        //     state = MovementState.running;
-            
-        // }
-
-        // if (rb.velocity.y > .1f) {
-        //     state = MovementState.jumping;
-        // } else if (rb.velocity.y < -.1f) {
-        //     state = MovementState.falling;
-        // }
-        // anim.SetInteger("state", (int) state);
         if (mousePos.x >= rb.position.x) {
             sp.flipX = false;
         } else {

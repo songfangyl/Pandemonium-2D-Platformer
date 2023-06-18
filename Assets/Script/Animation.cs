@@ -5,24 +5,17 @@ using UnityEngine;
 public class Animation : MonoBehaviour
 {
     private PlayerMovement player;
-    [SerializeField] private Camera cam;
-
     private Animator anim;
     // Start is called before the first frame update
-    private void Awake() {
-        player = GetComponent<PlayerMovement>();
-    }
     void Start()
     {
         anim = GetComponent<Animator>();
+        player = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update() 
     {
-        if (player.isGround()) {
-            Debug.Log("isGROUND!!!!!");
-        } 
         anim.SetFloat("AirSpeedY", player.airSpeedY());
         anim.SetBool("Grounded", player.isGround());
         if (player.isMoving()) {
