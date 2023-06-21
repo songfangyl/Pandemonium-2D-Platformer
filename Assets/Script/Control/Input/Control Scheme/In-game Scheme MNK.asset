@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5963eac3fb19eee43a6f203229af599b, type: 3}
+  m_Name: In-game Scheme MNK
+  m_EditorClassIdentifier: 
+  actionCommandList:
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 1D Axis
+        m_Id: 05eafe1e-bd37-40be-bcb8-fabb43f23f44
+        m_Path: 1DAxis
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 4
+      - m_Name: negative
+        m_Id: 855d24ac-13f6-4995-a495-d0915045dedb
+        m_Path: <Keyboard>/a
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 8
+      - m_Name: positive
+        m_Id: 4722932f-e798-4e83-9e83-e7f591e2c352
+        m_Path: <Keyboard>/d
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 8
+      m_Flags: 0
+    command: {fileID: 11400000, guid: decd82a2c7c2098419d471348d1ce455, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 9bba89b9-aaab-4a1f-8aea-debd2f30f8c4
+        m_Path: <Keyboard>/w
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 982117dae840e1b4482d0d20bab994b5, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 1283760f-42e4-48a6-87d1-5eae21b51baa
+        m_Path: <Keyboard>/w
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: a3b1b5099811cd149a2a5955ca6c0bfa, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 68ca0857-01bd-4afa-b525-00366d8333f6
+        m_Path: <Keyboard>/s
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 8afb03e0002a4a64b82d3502f9c06891, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 5586d871-3819-4d46-948e-aafde943903b
+        m_Path: <Keyboard>/leftCtrl
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 35c655f9babaf104ca0877f1e69f18b9, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 556c1ab6-ccbd-4534-bbfa-739187ae5df9
+        m_Path: <Keyboard>/leftShift
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: a38ea7d3266c35d49baddcf62e8bda0b, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 328c9aff-d84f-4477-b81b-23c6a21c7d9a
+        m_Path: <Keyboard>/space
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: b431cbb277a83f24fa51c5a9de67d788, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: Tap
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 03ff6666-3b30-4338-ac7d-252c2dc377e1
+        m_Path: <Mouse>/leftButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: cd15359534a0ff5408330b5a83ac6fe1, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: SlowTap
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 831a08c0-4ed6-4167-9d30-160ab6f8f641
+        m_Path: <Mouse>/leftButton
+        m_Interactions: SlowTap
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: b3b068cb0c2c5374180d8ae770bb5867, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 730e6fcc-93b7-4290-a814-b43142063c7f
+        m_Path: <Mouse>/rightButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 4136760f1da9b7f409054db568666a49, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 19844da3-9afc-4f34-8a15-f14598f97ab0
+        m_Path: <Keyboard>/q
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 0d4c58ac1be8b6340b9cb25e2795fa70, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: d8d237de-2a64-4893-a78e-f525c7ba6896
+        m_Path: <Keyboard>/e
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 32b9e2155bdfa4e45ad7a90e2d7147fa, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: f9e4b6f7-0942-44d5-be89-e33709c377e7
+        m_Path: <Keyboard>/f
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: c9d4d97e41061f4408cbd9aa59addfe7, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 87a2ad63-3855-4111-a4f7-1dea91cf9a13
+        m_Path: <Keyboard>/g
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 5de6f856c6be9c641899b3436cc57a1b, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 40622fc1-2959-4be7-8faa-f71722f68029
+        m_Path: <Keyboard>/tab
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: bcb0983dd30f5014ca0c930edf64f434, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 5de4646e-7e90-42bd-b67e-cfd311e4a180
+        m_Path: <Keyboard>/escape
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+      m_Flags: 0
+    command: {fileID: 11400000, guid: e94d380afbdaf244b8cb911603400f0c, type: 2}

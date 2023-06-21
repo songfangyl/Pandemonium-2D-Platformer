@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5963eac3fb19eee43a6f203229af599b, type: 3}
+  m_Name: UI scheme
+  m_EditorClassIdentifier: 
+  actionCommandList:
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: abd15671-d581-4da5-be18-d29930791c35
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 26c2dcc49b793be49be36a31253d4627, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 699109ca-9dec-4b1c-a24e-b8dc79dcfe41
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    command: {fileID: 11400000, guid: b4eb79efb8168b84ca79ed1250ada01a, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d9f049f8-596c-4a39-a458-0f450d4518b1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    command: {fileID: 11400000, guid: d30b523e6ace9cb46bf4a0d04924fd75, type: 2}
+  - action:
+      m_Name: Action
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a156b34e-ebc7-4dd0-a41f-38d76abc36b7
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    command: {fileID: 11400000, guid: 64b1f55e68fcaa643aa54c8eca59187c, type: 2}

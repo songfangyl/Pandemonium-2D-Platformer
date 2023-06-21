@@ -40,27 +40,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        horizontalMove();
+        //horizontalMove();
         jump();
         sprint();
         animationUpdate();
         crouch();
     }
 
-    public bool isMoving() {
+
+
+
+    // keeping for animation
+    public bool isMoving() 
+    {
         return directionX != 0;
     }
 
-    public float airSpeedY() {
-        return rb.velocity.y;
+    public void directionChange(float dir) 
+    {
+        directionX = dir;
     }
-    private void animationUpdate() {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        if (mousePos.x >= rb.position.x) {
-            sp.flipX = false;
-        } else {
-            sp.flipX = true;
-        }
+
+    public float airSpeedY() 
+    {
+        return rb.velocity.y;
     }
     
     public bool isGround() 
@@ -68,10 +71,27 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
+    private void animationUpdate() 
+    {
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
+        if (mousePos.x >= rb.position.x) {
+            sp.flipX = false;
+        } else {
+            sp.flipX = true;
+        }
+    }
+    
+
+
+
+
+    // need to remove
     private void horizontalMove() {
         directionX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
     }
+
     private void sprint() {
         if  (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
             moveSpeed *= 2f;
