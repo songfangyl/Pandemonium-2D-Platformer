@@ -962,30 +962,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b088f009ee9a44b81b2db2086cc8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 519420031}
+  moveSpeed: 7
+  sprintMultplier: 1.5
+  jumpVelocity: 10
+  dropVelocity: 5
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
-  moveAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6f20bab9-433d-41b9-95ab-92ffada30a9f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  jumpAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 462cc512-82a4-49af-9cb0-f88269ec8913
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  moveSpeed: 7
-  jumpForce: 14
-  cam: {fileID: 519420031}
   standingSize: {x: 1.162207, y: 1.399967}
   crouchingSize: {x: 1.162207, y: 0.9}
 --- !u!114 &505768524
