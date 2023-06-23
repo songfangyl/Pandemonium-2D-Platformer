@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-
+// fang yi stupid   
 
 
 
