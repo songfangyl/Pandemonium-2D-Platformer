@@ -111,10 +111,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     // need to remove
-    private void horizontalMove() {
-        directionX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
-    }
+    // private void horizontalMove() {
+    //     directionX = Input.GetAxisRaw("Horizontal");
+    //     rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
+    // }
 
     // private void sprint() {
     //     if  (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) {
