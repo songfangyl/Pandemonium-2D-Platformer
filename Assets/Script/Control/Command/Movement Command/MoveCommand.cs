@@ -9,19 +9,19 @@ namespace Control
     public class MoveCommand : BaseCommand 
     {
 
-        [Range(0,20f)] [SerializeField] private float velocity = 10f; 
-        
         public override void Execute(InputAction action, GameObject player) 
         {
+            //component retrieve from player object
             Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
             PlayerMovement script = player.GetComponent<PlayerMovement>();
+
             float direction = action.ReadValue<float>();
            
             // to update animation
             script.directionChange(direction);
 
             //movement
-            playerBody.velocity = new Vector2(direction * velocity, playerBody.velocity.y);
+            playerBody.velocity = new Vector2(direction * script.speed(), playerBody.velocity.y);
         }
                 
         

@@ -11,7 +11,10 @@ namespace Control
     {
         public override void Execute(InputAction action, GameObject player) 
         {
+            PlayerMovement script = player.GetComponent<PlayerMovement>();
+            bool active = action.ReadValue<float>() != 0;
 
+            script.crouch(active);
         }
     }
 }

@@ -18,9 +18,12 @@ public class Animation : MonoBehaviour
     {
         anim.SetFloat("AirSpeedY", player.airSpeedY());
         anim.SetBool("Grounded", player.isGround());
-        if (player.isMoving()) {
+
+        if (player.isMoving()) 
+        {
             anim.SetInteger("AnimState", 1);
-        } else {
+        } else 
+        {
             anim.SetInteger("AnimState", 0);
         }
     }
