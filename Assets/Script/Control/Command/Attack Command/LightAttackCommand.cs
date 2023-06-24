@@ -17,7 +17,7 @@ namespace Control
         public override void Execute(InputAction action, GameObject player) 
         {
             if (gameObj == null) gameObj = player;
-            if (isOnGround(gameObj) && action.WasPressedThisFrame()) {
+            if (player.GetComponent<PlayerMovement>().isGround() && action.WasPressedThisFrame()) {
                 attack = true;
             }
   
@@ -45,18 +45,16 @@ namespace Control
                 }
             }
         }
-    public void ResetAttack()
-    {
-        attack = false;
-        executionNumber = 0;
-    }
-
-        private bool isOnGround(GameObject gameObject)
+        public void ResetAttack()
         {
-            RaycastHit2D hit = Physics2D.CircleCast(gameObject.GetComponent<CircleCollider2D>().bounds.center, gameObject.GetComponent<CircleCollider2D>().radius, Vector2.down, 0.1f, groundLayer);
-            return hit.collider != null;
+            attack = false;
+            executionNumber = 0;
         }
 
-        
+        // private bool isOnGround(GameObject gameObject)
+        // {
+        //     RaycastHit2D hit = Physics2D.BoxCast(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<CircleCollider2D>().radius, Vector2.down, 0.1f, groundLayer);
+        //     return hit.collider != null;
+        // }
     }
 }
