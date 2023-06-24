@@ -14,10 +14,11 @@ namespace Control
         int executionNumber = 0;
         public float attackRange = .35f;
         GameObject gameObj;
+
         public override void Execute(InputAction action, GameObject player) 
         {
             if (gameObj == null) gameObj = player;
-            if (isOnGround(gameObj) && action.WasPressedThisFrame()) {
+            if (gameObj.GetComponent<PlayerMovement>().isGround() && action.WasPressedThisFrame()) {
                 attack = true;
             }
   
@@ -51,11 +52,11 @@ namespace Control
         executionNumber = 0;
     }
 
-        private bool isOnGround(GameObject gameObject)
-        {
-            RaycastHit2D hit = Physics2D.CircleCast(gameObject.GetComponent<CircleCollider2D>().bounds.center, gameObject.GetComponent<CircleCollider2D>().radius, Vector2.down, 0.1f, groundLayer);
-            return hit.collider != null;
-        }
+        // private bool isOnGround(GameObject gameObject)
+        // {
+        //     RaycastHit2D hit = Physics2D.CircleCast(gameObject.GetComponent<CircleCollider2D>().bounds.center, gameObject.GetComponent<CircleCollider2D>().radius, Vector2.down, 0.1f, groundLayer);
+        //     return hit.collider != null;
+        // }
 
         
     }

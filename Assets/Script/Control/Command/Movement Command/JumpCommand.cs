@@ -16,8 +16,11 @@ namespace Control
             PlayerMovement script = player.GetComponent<PlayerMovement>();
             bool jumped = action.triggered;
 
-            if (jumped)
+            if (jumped) 
+            {
                 playerBody.velocity = new Vector3(0,script.jumpSpeed(),0);
+                Debug.Log("jump");
+            }
 
 
         }

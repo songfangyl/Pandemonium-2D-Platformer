@@ -55,13 +55,14 @@ public class PlayerMovement : MonoBehaviour
 
     // player's velocity
     [Range(0, 20f)] [SerializeField] private float moveSpeed = 7f;
-    [Range(1, 2f)] [SerializeField] private float sprintMultplier = 1.5f;
 
-    public float speed()    {   return moveSpeed;   }
+    public float move()    {   return moveSpeed;   }
 
     //sprinting 
-    public void sprint()    {   moveSpeed *= sprintMultplier;     }
-    public void walk()      {   moveSpeed /= sprintMultplier;     }
+     [Range(0, 20f)] [SerializeField] private float walkSpeed = 7f;
+     [Range(0, 20f)] [SerializeField] private float sprintSpeed = 13f;
+    public void sprint()    {   moveSpeed = sprintSpeed;     }
+    public void walk()      {   moveSpeed = walkSpeed;     }
 
     // player jumping 
     [Range(0, 20f)] [SerializeField] private float jumpVelocity = 10f;
@@ -106,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-// fang yi stupid   
+    // fang yi stupid   
 
 
 
