@@ -14,7 +14,7 @@ namespace Control
         {
             Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
             PlayerMovement script = player.GetComponent<PlayerMovement>();
-            bool jumped = action.triggered;
+            bool jumped = action.triggered && script.isGround();
 
             if (jumped) 
             {
