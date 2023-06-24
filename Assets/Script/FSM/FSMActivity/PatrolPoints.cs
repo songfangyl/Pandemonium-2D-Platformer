@@ -30,5 +30,10 @@ namespace AI.FSM
             return targetPoint;
         }
 
+        public float GetTargetPointDirectionX()
+        {
+            return targetPoint.x - transform.position.x;
+        }
+
     }
 }

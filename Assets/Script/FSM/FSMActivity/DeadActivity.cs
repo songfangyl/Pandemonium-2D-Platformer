@@ -1,0 +1,36 @@
+using UnityEngine;
+ 
+namespace AI.FSM.Activities
+{
+    [CreateAssetMenu(menuName = "AI/FSM/Activity/DeadActivity")]
+    public class DeadActivity : Activity
+    {
+        // public AudioClip deadClip;
+ 
+        EnemyState enemyState;
+ 
+        public override void Enter(BaseStateMachine stateMachine)
+        {
+            enemyState = stateMachine.GetComponent<EnemyState>();
+ 
+            // stateMachine.GetComponent<AudioSource>().PlayOneShot(deadClip);
+        }
+ 
+        public override void Execute(BaseStateMachine stateMachine)
+        {
+            enemyState.deadTimer += 1.5f * Time.deltaTime;
+            if(enemyState.deadTimer >= 1.0f)
+            {
+                Destroy(stateMachine.GetComponentInParent<Transform>().gameObject);
+            }
+            else
+            {
+                stateMachine.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f, Mathf.Lerp(1, 0, enemyState.deadTimer));
+            }
+        }
+ 
+        public override void Exit(BaseStateMachine stateMachine)
+        {
+        }
+    }
+}

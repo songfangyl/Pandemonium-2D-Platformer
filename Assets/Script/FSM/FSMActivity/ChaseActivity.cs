@@ -22,7 +22,7 @@ namespace AI.FSM.Activities
                     
             Vector2 dir = (target.transform.position - stateMachine.transform.position).normalized;
             RigidBody.velocity = new Vector2(dir.x * speed, RigidBody.velocity.y);
-            SpriteRenderer.flipX = (dir.x > 0) ? false: true;
+            stateMachine.GetComponent<EnemyState>().flipSprite(dir.x);
         }
  
         public override void Exit(BaseStateMachine stateMachine)

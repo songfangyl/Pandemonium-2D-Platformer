@@ -14,7 +14,7 @@ namespace AI.FSM.Activities
             var SpriteRenderer = stateMachine.GetComponent<SpriteRenderer>();
             var Animator       = stateMachine.GetComponent<Animator>();
             var Transform      = stateMachine.GetComponent<Transform>();  
-            SpriteRenderer.flipX = (Transform.position.x  - PatrolPoints.GetTargetPoint().x > 0) ? true : false;
+            stateMachine.GetComponent<EnemyState>().flipSprite(PatrolPoints.GetTargetPointDirectionX());
             Animator.SetBool("isWalk", true);
         }
  
