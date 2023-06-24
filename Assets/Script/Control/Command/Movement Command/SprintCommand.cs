@@ -15,7 +15,9 @@ namespace Control
             bool sprint = action.ReadValue<float>() != 0;
 
             if (sprint) 
+            {
                 script.sprint();
+            }
             else
                 script.walk();
 
