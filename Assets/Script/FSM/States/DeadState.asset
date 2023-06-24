@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dde7c167e380bf408627b625bac291c, type: 3}
   m_Name: DeadState
   m_EditorClassIdentifier: 
-  Activities: []
+  Activities:
+  - {fileID: 11400000, guid: 47b8135f4d1d1824280ddd4b16738a64, type: 2}
   Transitions: []

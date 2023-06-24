@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18d965d39004a2408a05bf4dc1a6fad, type: 3}
   m_Name: StunExpiredDecision
   m_EditorClassIdentifier: 
-  isHit: 1
+  isHit: 0

@@ -17,7 +17,7 @@ namespace AI.FSM
 
         public bool HasReachedPoint()
         {
-            return (Vector2.Distance(transform.position, targetPoint) <= 0.1f) ? true : false;
+            return Mathf.Abs(transform.position.x - targetPoint.x) <= 0.1f;
         }
         
         public void SetNextTargetPoint()

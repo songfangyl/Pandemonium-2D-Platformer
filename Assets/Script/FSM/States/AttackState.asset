@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dde7c167e380bf408627b625bac291c, type: 3}
   m_Name: AttackState
   m_EditorClassIdentifier: 
-  Activities: []
-  Transitions: []
+  Activities:
+  - {fileID: 11400000, guid: 462ead226241fe0478d9ad9d26dfa260, type: 2}
+  Transitions:
+  - {fileID: 11400000, guid: c0fdf2638a1c9f3498b757b58921b146, type: 2}
+  - {fileID: 11400000, guid: 5523910d53fefc34bab6dc7c7d8369ca, type: 2}

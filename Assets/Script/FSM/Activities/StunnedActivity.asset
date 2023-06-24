@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StunnedActivity
   m_EditorClassIdentifier: 
   hitInvincibilityTime: 1
-  hitAnimationSpeed: 1
+  hitAnimationSpeed: 5

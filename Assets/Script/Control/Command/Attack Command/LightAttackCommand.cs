@@ -41,7 +41,7 @@ namespace Control
                     {
                         hitTarget.GetComponent<EnemyState>().hitDir = hitTarget.transform.position - gameObj.transform.position;
                         hitTarget.GetComponent<EnemyState>().isHit = true;
-                }
+                    }
                 }
             }
         }

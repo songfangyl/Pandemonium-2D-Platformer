@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dde7c167e380bf408627b625bac291c, type: 3}
   m_Name: StunnedState
   m_EditorClassIdentifier: 
-  Activities: []
-  Transitions: []
+  Activities:
+  - {fileID: 11400000, guid: 9e65e0abe20d9a24f9246a728ef0803b, type: 2}
+  Transitions:
+  - {fileID: 11400000, guid: 62d3dab36063857469d78d6f2895e03f, type: 2}
+  - {fileID: 11400000, guid: 472a30740c657e9479e14ef65dd2c071, type: 2}

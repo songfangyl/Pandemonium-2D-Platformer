@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c2bd2c09de7224c92bb359d14a650f, type: 3}
   m_Name: EnemyEscapedBattle
   m_EditorClassIdentifier: 
-  decision: {fileID: 0}
-  TrueState: {fileID: 0}
-  FalseState: {fileID: 0}
+  decision: {fileID: 11400000, guid: e8120cec784bb0043840228d686ccfa0, type: 2}
+  TrueState: {fileID: 11400000, guid: f585d102f040fd84287cbb75e3932c1c, type: 2}
+  FalseState: {fileID: 11400000, guid: 677d3591982f8ad4a93a6ef84d741979, type: 2}

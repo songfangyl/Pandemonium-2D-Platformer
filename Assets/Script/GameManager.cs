@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         {
             HP = 0;
             isDead = true;
+            Debug.Log("DEADDDDDDD");
         }
     }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7909dc9a4f209445a02e12eb9a35620, type: 3}
   m_Name: PlayerCloseToAttackDecision
   m_EditorClassIdentifier: 
-  targetTag: 
-  distanceThreshold: 3
+  targetTag: Player
+  distanceThreshold: 2

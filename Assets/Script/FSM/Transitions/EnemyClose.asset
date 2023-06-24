@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c2bd2c09de7224c92bb359d14a650f, type: 3}
   m_Name: EnemyClose
   m_EditorClassIdentifier: 
-  decision: {fileID: 0}
-  TrueState: {fileID: 0}
-  FalseState: {fileID: 0}
+  decision: {fileID: 11400000, guid: 2cb8ef4dea520c141afbfda1577f14af, type: 2}
+  TrueState: {fileID: 11400000, guid: d883fa911dbbdb3478020958482c9473, type: 2}
+  FalseState: {fileID: 11400000, guid: 677d3591982f8ad4a93a6ef84d741979, type: 2}

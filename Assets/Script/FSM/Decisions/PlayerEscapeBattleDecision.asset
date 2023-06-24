@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db43543fd1e5a64c8a68540d541c7bf, type: 3}
   m_Name: PlayerEscapeBattleDecision
   m_EditorClassIdentifier: 
-  targetTag: 
-  distanceThreshold: 3
+  targetTag: Player
+  distanceThreshold: 2

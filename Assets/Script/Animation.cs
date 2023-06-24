@@ -6,6 +6,8 @@ public class Animation : MonoBehaviour
 {
     private PlayerMovement player;
     private Animator anim;
+
+    public bool isHit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +18,11 @@ public class Animation : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
+        // Jumping and Falling Animation
         anim.SetFloat("AirSpeedY", player.airSpeedY());
         anim.SetBool("Grounded", player.isGround());
 
+        // Running Animation
         if (player.isMoving()) 
         {
             anim.SetInteger("AnimState", 1);
