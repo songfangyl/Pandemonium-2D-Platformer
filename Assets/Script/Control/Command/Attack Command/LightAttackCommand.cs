@@ -14,6 +14,7 @@ namespace Control
         int executionNumber = 0;
         public float attackRange = .35f;
         GameObject gameObj;
+
         public override void Execute(InputAction action, GameObject player) 
         {
             if (gameObj == null) gameObj = player;
@@ -50,6 +51,7 @@ namespace Control
             attack = false;
             executionNumber = 0;
         }
+
 
         // private bool isOnGround(GameObject gameObject)
         // {

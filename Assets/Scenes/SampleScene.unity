@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
-  moveSpeed: 7
+  moveSpeed: 10
   sprintMultplier: 1.5
   jumpVelocity: 10
   dropVelocity: 5
@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   maxHP: 5
+  controlScheme: {fileID: 11400000, guid: bf98260b590904e408332fc1442e2e5f, type: 2}
 --- !u!4 &564723762
 Transform:
   m_ObjectHideFlags: 0
@@ -1207,7 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: 0, y: -2.883948}
+  - {x: 13, y: -2.883948}
   - {x: 18, y: -2.883948}
 --- !u!50 &607596342
 Rigidbody2D:
@@ -109578,6 +109579,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1309690897300561498, guid: 955bb40c4a6e9c44ea5ac77154298dfe, type: 3}
   m_PrefabInstance: {fileID: 1966200505}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1522838527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522838529}
+  - component: {fileID: 1522838528}
+  m_Layer: 0
+  m_Name: ControlScheme
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1522838528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522838527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c56e3933b39a55b48840873ac60930c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1522838529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522838527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.21, y: 8.18, z: -0.8820726}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1539962208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5809131671955166801, guid: 007795420de0cd74aaa05d8fb218173b, type: 3}

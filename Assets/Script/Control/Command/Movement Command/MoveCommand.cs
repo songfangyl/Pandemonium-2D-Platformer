@@ -16,12 +16,16 @@ namespace Control
             PlayerMovement script = player.GetComponent<PlayerMovement>();
 
             float direction = action.ReadValue<float>();
+            //Debug.Log("airSpeed" + script.airSpeedY());
+            Debug.Log("speed " + script.move());
+            //Debug.Log(direction * script.speed());
            
+
             // to update animation
             script.directionChange(direction);
 
             //movement
-            playerBody.velocity = new Vector2(direction * script.speed(), playerBody.velocity.y);
+            playerBody.velocity = new Vector2(direction * 7f, playerBody.velocity.y);
         }
                 
         

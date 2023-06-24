@@ -20,7 +20,9 @@ namespace Control
     // handles the input-command behavior
     public class InputHandler : MonoBehaviour
     {
+        
         List<ActionCommandPair> actionCommandList = new List<ActionCommandPair>();
+
         Dictionary<InputAction,BaseCommand> binding = new Dictionary<InputAction,BaseCommand>();
         Dictionary<BaseCommand, InputAction> reversed_binding = new Dictionary<BaseCommand, InputAction>();
 
@@ -64,6 +66,7 @@ namespace Control
         void onEnable() 
         {
             UpdateActionCommandBindings();
+            Debug.Log("enabled");
         }
 
         void OnDisable() 
@@ -80,6 +83,7 @@ namespace Control
 
         void Update() 
         {
+
             foreach (var action in binding) 
             {
                 action.Value.Execute(action.Key, player);

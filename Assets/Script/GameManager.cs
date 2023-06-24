@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using Control;
+
 public class GameManager : MonoBehaviour
 {
     public int HP = 5;
     public int maxHP = 5;
     private bool isDead = false;
-     
+    [SerializeField] public ActionCommandScheme controlScheme;
     // ... some other game related global stats
  
     #region Singleton
@@ -25,6 +26,14 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    void Start() 
+    {
+        InputHandler.inputHandler.UpdateActionCommandList(controlScheme.actionCommandList);
+        InputHandler.inputHandler.UpdateActionCommandBindings();
+
+        // GameObject.FindGameObjectWithTag("Control Scheme").GetComponenet<InputHandler>().UpdateActionCommandList(controlScheme.actionCommandList);
+    }
     #endregion Singleton
  
     public void subtractHP(int points)
@@ -40,4 +49,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("DEADDDDDDD");
         }
     }
+
 }
