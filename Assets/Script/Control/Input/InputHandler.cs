@@ -66,7 +66,6 @@ namespace Control
         void onEnable() 
         {
             UpdateActionCommandBindings();
-            Debug.Log("enabled");
         }
 
         void OnDisable() 
@@ -77,15 +76,18 @@ namespace Control
             }
         }
 
-        void Start() {
+        public void Start() {
             player = GameObject.FindGameObjectWithTag("Player");
         }
 
         void Update() 
         {
+            if (player == null) 
+                player = GameObject.FindGameObjectWithTag("Player");
 
             foreach (var action in binding) 
             {
+                if (player != null)
                 action.Value.Execute(action.Key, player);
             }
         }

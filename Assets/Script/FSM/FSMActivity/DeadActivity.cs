@@ -12,6 +12,8 @@ namespace AI.FSM.Activities
         public override void Enter(BaseStateMachine stateMachine)
         {
             enemyState = stateMachine.GetComponent<EnemyState>();
+            stateMachine.GetComponent<Animator>().Play("Death");
+            stateMachine.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
  
             // stateMachine.GetComponent<AudioSource>().PlayOneShot(deadClip);
         }

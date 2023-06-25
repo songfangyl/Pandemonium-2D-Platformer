@@ -9,7 +9,7 @@ public class EnemyState : MonoBehaviour
     int executionNumber = 0;
  
     public bool isHit = false, isDead = false;
-    public float hitTimer = 0, deadTimer = 0, attackRange = 0.5f;
+    public float hitTimer = 0, deadTimer = 0, attackRange = 1f;
     public Vector2 hitDir = Vector2.zero;
     
  
@@ -20,16 +20,12 @@ public class EnemyState : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Collider2D[] hitTargets = Physics2D.OverlapCircleAll(transform.GetChild(0).position, attackRange, enemyLayer);
-
-            foreach (Collider2D hitTarget in hitTargets)
+            if (hitTargets.Length > 0 && hitTargets[0] != null)
             {
-                hitTarget.GetComponent<Animator>().SetTrigger("Hurt");
-                Debug.Log("Hurt!!!!!");
-            }
-            if(hitTargets.Length > 0 && hitTargets[0] != null)
-            {
-                Debug.Log("HitYOU!!!");
-                GameManager.instance.subtractHP(1);
+                foreach (Collider2D hitTarget in hitTargets)
+                {
+                    hitTarget.GetComponent<PlayerLife>().subtractHP(1);
+                }
             }
          }
     }

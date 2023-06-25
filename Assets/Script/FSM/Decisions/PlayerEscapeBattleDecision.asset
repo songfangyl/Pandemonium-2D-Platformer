@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerEscapeBattleDecision
   m_EditorClassIdentifier: 
   targetTag: Player
-  distanceThreshold: 2
+  distanceThreshold: 3

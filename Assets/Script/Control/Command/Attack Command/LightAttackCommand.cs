@@ -12,7 +12,7 @@ namespace Control
         public LayerMask enemyLayer;     
         bool attack = false;
         int executionNumber = 0;
-        public float attackRange = .35f;
+        public float attackRange = 1f;
         GameObject gameObj;
 
         public override void Execute(InputAction action, GameObject player) 
@@ -23,7 +23,7 @@ namespace Control
             }
   
             if(attack) {
-                gameObj.GetComponent<Animator>().Play("Attack");
+                gameObj.GetComponent<Animator>().Play("Attack1");
             }
         }
 

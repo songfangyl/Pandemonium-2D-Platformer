@@ -36,18 +36,17 @@ public class GameManager : MonoBehaviour
     }
     #endregion Singleton
  
-    public void subtractHP(int points)
-    {
-        if (HP > points)
-        {
-            HP -= points;
-        }
-        else
-        {
-            HP = 0;
-            isDead = true;
-            Debug.Log("DEADDDDDDD");
-        }
-    }
+    // public void subtractHP(int points)
+    // {
+    //     if (HP > points)
+    //     {
+    //         HP -= points;
+    //     }
+    //     else
+    //     {
+    //         HP = 0;
+    //         isDead = true;
+    //     }
+    // }
 
 }

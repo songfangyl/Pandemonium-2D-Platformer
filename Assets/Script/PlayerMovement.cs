@@ -21,6 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     private float directionX = 0f;
 
+    private Transform trans;
+
+    // private float m_timeSinceAttack = 0.0f;
+
     
    
     
@@ -39,12 +43,14 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
+        trans = GetComponent<Transform>();
         normalBound = coll.bounds;
     }
     
     // Update is called once per frame
     private void Update()
     {
+        // m_timeSinceAttack += Time.deltaTime;
         //horizontalMove();
         //jump();
         //sprint();
@@ -101,12 +107,24 @@ public class PlayerMovement : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         
         if (mousePos.x >= rb.position.x) {
-            sp.flipX = false;
+            Vector3 transformScale = transform.localScale;
+            transformScale.x = 1;
+            transform.localScale = transformScale;
         } else {
-            sp.flipX = true;
+            Vector3 transformScale = transform.localScale;
+            transformScale.x = -1;
+            transform.localScale = transformScale;
         }
+
     }
     
+    // public float getAttackTime() {
+    //     return m_timeSinceAttack;
+    // }
+
+    // public void resetAttackTime() {
+    //     m_timeSinceAttack = 0;
+    // }
     // fang yi stupid   
 
 

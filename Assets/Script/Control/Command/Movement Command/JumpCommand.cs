@@ -19,7 +19,6 @@ namespace Control
             if (jumped) 
             {
                 playerBody.velocity = new Vector3(0,script.jumpSpeed(),0);
-                Debug.Log("jump");
             }
 
 
