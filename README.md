@@ -8,4 +8,5 @@
 More details of our project can be found here [Documentation]()
 
 ## Demo
-([https://github.com/songfangyl/Orbital-2DPlatformer-Team5619/tree/master/Orbital-Demo](https://songfangyl.github.io/Orbital-Demo/)https://songfangyl.github.io/Orbital-Demo/)
+Below is the demo of the game.
+[Demo : ](https://songfangyl.github.io/Orbital-Demo/)
