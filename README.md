@@ -8,5 +8,5 @@
 More details of our project can be found here [Documentation]()
 
 ## Demo
-Below is the demo of the game.
+Below is the demo of the game.\n
 [Demo : ](https://songfangyl.github.io/Orbital-Demo/)
