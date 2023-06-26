@@ -37,8 +37,8 @@ public class EnemyState : MonoBehaviour
 
     public void flipSprite(float xDir)
     {
-        if ((xDir > 0 && transform.localScale.x != -1) ||
-            (xDir < 0 && transform.localScale.x != 1))
+        if ((xDir > 0 && transform.localScale.x > 0 ) ||
+            (xDir < 0 && transform.localScale.x < 0))
         {
             Vector3 transformScale = transform.localScale;
             transformScale.x *= -1;

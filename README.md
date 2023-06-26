@@ -6,3 +6,7 @@
 
 ## Documentation
 More details of our project can be found here [Documentation]()
+
+## Demo
+Demo of the game.
+[Demo : ](https://songfangyl.github.io/Orbital-Demo/)
