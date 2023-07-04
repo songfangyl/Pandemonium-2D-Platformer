@@ -29,7 +29,7 @@ public class PlayerLife : MonoBehaviour
 
 
     private void Die() {
-        anim.SetTrigger("Death");
+        anim.Play("Death");
         rb.bodyType = RigidbodyType2D.Static;
     }
 
@@ -54,6 +54,7 @@ public class PlayerLife : MonoBehaviour
             LifeText.text = "Life:";
             HP = 0;
             isDead = true;
+            anim.SetBool("isDead", true);
             if (isDead && !alreadyDie) {
                 Die();
                 alreadyDie = true;
