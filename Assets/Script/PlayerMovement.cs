@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DataAssets;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,16 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform trans;
 
-    // private float m_timeSinceAttack = 0.0f;
+    // To load character values
+    [SerializeField] private PlayerStats playerStats;
 
-    
-   
-    
 
     [SerializeField] private Camera cam;
 
     
-    private enum MovementState {idle, running, jumping, falling};
     
 
 
@@ -45,34 +43,45 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         trans = GetComponent<Transform>();
         normalBound = coll.bounds;
+
+        loadStats();
     }
     
     // Update is called once per frame
     private void Update()
     {
-        // m_timeSinceAttack += Time.deltaTime;
-        //horizontalMove();
-        //jump();
-        //sprint();
         animationUpdate();
-        //crouch();
     }
 
+    
 
-    // player's velocity
-    [Range(0, 20f)] [SerializeField] private float moveSpeed = 7f;
+    // player's moving
+    private float moveSpeed;
+
+    private float walkSpeed;
+
+    private float sprintSpeed;
+    
+    private void loadStats() 
+    {
+        playerStats.initialize();
+
+        walkSpeed = playerStats.Speed();
+        sprintSpeed = walkSpeed * 1.8f;
+        moveSpeed = walkSpeed;
+        jumpVelocity = playerStats.JumpSpeed();
+    }
 
     public float move()    {   return moveSpeed;   }
-
-    //sprinting 
-     [Range(0, 20f)] [SerializeField] private float walkSpeed = 7f;
-     [Range(0, 20f)] [SerializeField] private float sprintSpeed = 13f;
     public void sprint()    {   moveSpeed = sprintSpeed;     }
     public void walk()      {   moveSpeed = walkSpeed;     }
 
+
+
     // player jumping 
-    [Range(0, 20f)] [SerializeField] private float jumpVelocity = 10f;
-    [Range(0, 10f)] [SerializeField] private float dropVelocity = 5f;
+   
+    private float jumpVelocity;
+
     [SerializeField] private LayerMask jumpableGround;
 
     public float airSpeedY()    {  return rb.velocity.y; }
@@ -82,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
     //  crouching
     [SerializeField] private Vector2 standingSize;
+
     [SerializeField] private Vector2 crouchingSize;
 
     public void crouch(bool active) 
