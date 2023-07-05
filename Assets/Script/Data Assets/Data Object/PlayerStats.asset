@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5aa39635edc8b47af076bf4be8e969, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  levels: {fileID: 11400000, guid: e71397c2052b5014c87ab0cc14561f43, type: 2}
+  levels: {fileID: 11400000, guid: 5b236d6fd9fde15439d2eefa9c6378a5, type: 2}
   baseHealth: 100
   baseAttack: 10
   baseSpeed: 7

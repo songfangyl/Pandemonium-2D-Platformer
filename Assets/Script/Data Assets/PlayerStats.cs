@@ -14,16 +14,16 @@ namespace DataAssets
         
         // Base stats 
         
-        [SerializeField] private float baseHealth = 100f;
-        [SerializeField] private float baseAttack = 10f;
+        [SerializeField] private int baseHealth = 100;
+        [SerializeField] private int baseAttack = 10;
         [SerializeField] private float baseSpeed = 7f;
         [SerializeField] private float baseJumpSpeed = 5f;
 
 
         // Stats after levelling && Equipment
 
-        private float health;
-        private float attack;
+        private int health;
+        private int attack;
         private float speed;
         private float jumpSpeed;
 
@@ -31,8 +31,8 @@ namespace DataAssets
         {
             int lvl = levels.lvl();
             
-            health = lvl * baseHealth + 50 * (float)Math.Pow(lvl - 1, 0.68);
-            attack = lvl * baseAttack + 5 * (float)Math.Pow(lvl - 1, 0.49);
+            health = (int)(lvl * baseHealth + 50 * Math.Pow(lvl - 1, 0.68));
+            attack = (int)(lvl * baseAttack + 5 * Math.Pow(lvl - 1, 0.49));
             
         }
 
@@ -50,15 +50,20 @@ namespace DataAssets
             LevelScaling();
                     
         }
+        
+        public int Health() 
+        {
+            return health;
+        }
+
+        public int Attack()
+        {
+            return attack;
+        }
 
         public float Speed() 
         {
             return speed;
-        }
-
-        public float Health() 
-        {
-            return health;
         }
 
         public float JumpSpeed()

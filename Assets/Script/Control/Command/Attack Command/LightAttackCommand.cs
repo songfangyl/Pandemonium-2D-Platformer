@@ -27,6 +27,7 @@ namespace Control
             }
         }
 
+        // invoked at animation to be precise to the frames
         public void ExecuteAttack()
         {
             if (attack)
@@ -46,6 +47,7 @@ namespace Control
                 }
             }
         }
+
         public void ResetAttack()
         {
             attack = false;
