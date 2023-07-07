@@ -27,7 +27,7 @@ public class EnemyState : MonoBehaviour
     public int maxHP;
 
     public int attack;
-
+  
     // Information for executing attack
     public LayerMask enemyLayer;
  
