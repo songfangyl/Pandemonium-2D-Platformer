@@ -33,7 +33,7 @@ namespace Level
 
         private bool nextLevel()
         {
-            return expToNextLevel() >= 0;
+            return expToNextLevel() <= 0;
         }
 
 
@@ -66,9 +66,19 @@ namespace Level
 
 
         // Getter
-        public int lvl () 
+        public int lvl() 
         {
             return curr_lvl;
+        }
+
+        public int XP()
+        {
+            return total_exp;
+        } 
+ 
+        public int Lvl_XP()
+        {
+            return total_exp + expToNextLevel();
         }
     }
 
