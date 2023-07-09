@@ -22,11 +22,11 @@ public class EnemyState : MonoBehaviour
     }
     
     // Enemy stats
-    public int HP;
+    private int HP;
 
-    public int maxHP;
+    private int maxHP;
 
-    public int attack;
+    private int attack;
   
     // Information for executing attack
     public LayerMask enemyLayer;
@@ -78,5 +78,20 @@ public class EnemyState : MonoBehaviour
             transformScale.x *= -1;
             transform.localScale = transformScale;
         }
+    }
+
+    public void takeDamage(int damage)
+    {
+        HP -= damage;
+    }
+
+    public int getMaxHP() 
+    {
+        return maxHP;
+    }
+
+    public int getHP()
+    {
+        return HP;
     }
 }

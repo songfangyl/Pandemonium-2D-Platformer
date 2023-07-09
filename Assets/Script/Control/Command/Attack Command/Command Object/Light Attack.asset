@@ -15,6 +15,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  playerStats: {fileID: 11400000, guid: ca822f4971e321c4fb5fac1b5e341bdf, type: 2}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256

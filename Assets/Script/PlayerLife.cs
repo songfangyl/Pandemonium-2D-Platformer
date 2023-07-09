@@ -26,12 +26,16 @@ public class PlayerLife : MonoBehaviour
     private bool alreadyDie = false;
     [SerializeField] private Text LifeText; 
 
+    [SerializeField] private Slider LifeSlider;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         LoadStats();
+        LifeText.text = "Life: " + HP;
+        LifeSlider.maxValue = maxHP;
+        LifeSlider.value = HP;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -44,6 +48,7 @@ public class PlayerLife : MonoBehaviour
     private void Die() {
         anim.Play("Death");
         rb.bodyType = RigidbodyType2D.Static;
+        Invoke("EndScreen", 2f);
     }
 
     private void EndScreen() {
@@ -55,16 +60,14 @@ public class PlayerLife : MonoBehaviour
         if (HP > points)
         {
             GetComponent<Animator>().SetTrigger("Hurt");
-            // GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 8f), ForceMode2D.Impulse);
+            
             HP -= points;
-            LifeText.text = "Life:" + HP;;
             // for (int i = 0; i < HP; i++) {
             //     LifeText.text += " *";
             // }
         }
         else 
         {
-            LifeText.text = "Life:";
             HP = 0;
             isDead = true;
             anim.SetBool("isDead", true);
@@ -73,6 +76,8 @@ public class PlayerLife : MonoBehaviour
                 alreadyDie = true;
             }
         } 
+        LifeText.text = "Life:" + HP;
+        LifeSlider.value = HP;
     }
 
 }

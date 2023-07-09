@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels: {fileID: 11400000, guid: 5b236d6fd9fde15439d2eefa9c6378a5, type: 2}
   baseHealth: 100
-  baseAttack: 10
+  baseAttack: 2
   baseSpeed: 7
-  baseJumpSpeed: 14
+  baseJumpSpeed: 15

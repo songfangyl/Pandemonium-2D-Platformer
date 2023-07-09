@@ -5,8 +5,6 @@ using Control;
 
 public class GameManager : MonoBehaviour
 {
-    public int HP = 5;
-    public int maxHP = 5;
     private bool isDead = false;
     [SerializeField] public ActionCommandScheme controlScheme;
     // ... some other game related global stats

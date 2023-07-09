@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    [SerializeField] private Text orangesText; 
-
-    private int oranges = 0;
 
     private PlayerLevel playerLevel;
 
@@ -20,8 +17,6 @@ public class ItemCollector : MonoBehaviour
         if (other.gameObject.CompareTag("Orange")) 
         {
             Destroy(other.gameObject);
-            oranges++;
-            orangesText.text = "Oranges: " + oranges;
             playerLevel.CollectItem();
         }    
     }
