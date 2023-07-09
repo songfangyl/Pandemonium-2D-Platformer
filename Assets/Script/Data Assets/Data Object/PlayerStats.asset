@@ -16,4 +16,4 @@ MonoBehaviour:
   baseHealth: 100
   baseAttack: 10
   baseSpeed: 7
-  baseJumpSpeed: 5
+  baseJumpSpeed: 14
