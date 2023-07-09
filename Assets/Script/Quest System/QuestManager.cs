@@ -7,7 +7,7 @@ using DataAssets;
 
 namespace QuestSystem
 {
-    
+    [CreateAssetMenu(menuName = "QuestSystem/QuestManager")]
     public class QuestManager : ScriptableObject 
     {
         [SerializeField] private LevelManager levelManager;
