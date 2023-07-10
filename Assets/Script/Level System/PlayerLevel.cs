@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Level;
+using UnityEngine.UI;
 
 // Interaction between PlayerBody & LevelManager
 public class PlayerLevel : MonoBehaviour
 {
     [SerializeField] LevelManager levelManager;
+
+    [SerializeField] private Slider ExpSlider;
+
+    [SerializeField] private Text LevelText;
 
     // Stats for GUI
      private int lvl;
@@ -18,6 +23,9 @@ public class PlayerLevel : MonoBehaviour
      void Awake() 
     {
         LoadStats();
+        ExpSlider.maxValue = levelManager.expToNextLevel();
+        ExpSlider.value = 0;
+        LevelText.text = "LVL " + lvl;
     }
 
     private void LoadStats()
@@ -25,6 +33,8 @@ public class PlayerLevel : MonoBehaviour
         lvl = levelManager.lvl();
         XP = levelManager.XP();
         lvl_XP = levelManager.Lvl_XP();
+        ExpSlider.maxValue = levelManager.expToNextLevel();
+        ExpSlider.value = 0;
     }
 
     // need to implement amount of XP earned
@@ -35,6 +45,8 @@ public class PlayerLevel : MonoBehaviour
         levelManager.GainXP(XP_earned);
 
         XP += XP_earned;
+
+        ExpSlider.value += XP_earned;
 
         if (XP >= lvl_XP)
             LoadStats();
@@ -57,8 +69,11 @@ public class PlayerLevel : MonoBehaviour
 
         XP += XP_earned;
 
+        ExpSlider.value += XP_earned;
+
         if (XP >= lvl_XP)
             LoadStats();
+
 
     }
 

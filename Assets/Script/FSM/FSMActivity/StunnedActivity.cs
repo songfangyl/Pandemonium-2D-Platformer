@@ -27,10 +27,9 @@ namespace AI.FSM.Activities
                 enemyState.hitTimer += Time.deltaTime;
                 if (enemyState.hitTimer >= hitInvincibilityTime)
                 {
-                    enemyState.HP--;
                     enemyState.hitTimer = 0;
                     enemyState.isHit = false;
-                    if (enemyState.HP == 0)
+                    if (enemyState.getHP() <= 0)
                     {
                         enemyState.isDead = true;
                     }

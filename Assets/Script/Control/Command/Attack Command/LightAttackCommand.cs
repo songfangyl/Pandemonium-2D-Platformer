@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DataAssets;
 
 namespace Control 
 {
@@ -9,6 +10,9 @@ namespace Control
     public class LightAttackCommand : BaseCommand 
     {
         [SerializeField] private LayerMask groundLayer;   
+
+        [SerializeField] private PlayerStats playerStats;
+
         public LayerMask enemyLayer;     
         bool attack = false;
         int executionNumber = 0;
@@ -41,8 +45,11 @@ namespace Control
     
                     foreach (Collider2D hitTarget in hitTargets)
                     {
+                        playerStats.initialize();
+                        hitTarget.GetComponent<EnemyState>().takeDamage(playerStats.Attack());
                         hitTarget.GetComponent<EnemyState>().hitDir = hitTarget.transform.position - gameObj.transform.position;
                         hitTarget.GetComponent<EnemyState>().isHit = true;
+
                     }
                 }
             }

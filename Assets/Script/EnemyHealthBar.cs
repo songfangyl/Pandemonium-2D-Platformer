@@ -14,13 +14,13 @@ public class EnemyHealthBar : MonoBehaviour
     {
         slider = GetComponent<Slider>();
         enemy = GetComponentInParent<EnemyState>();
-        slider.maxValue = enemy.maxHP;
-        slider.value = enemy.HP;
+        slider.maxValue = enemy.getMaxHP();
+        slider.value = enemy.getHP();
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.value = enemy.HP;
+        slider.value = enemy.getHP();
     }
 }

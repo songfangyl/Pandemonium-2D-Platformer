@@ -30,7 +30,7 @@ namespace Level
 
 
 
-        private int expToNextLevel () 
+        public int expToNextLevel () 
         {
             return (int)(Math.Pow(curr_lvl - 1, 2) * 4.89 + 100 - total_exp);
         } 
