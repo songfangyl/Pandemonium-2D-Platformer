@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         trans = GetComponent<Transform>();
         normalBound = coll.bounds;
 
-        loadStats();
+        LoadStats();
     }
     
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float sprintSpeed;
     
-    private void loadStats() 
+    public void LoadStats() 
     {
         playerStats.initialize();
 
@@ -73,7 +73,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public float move()    {   return moveSpeed;   }
+
     public void sprint()    {   moveSpeed = sprintSpeed;     }
+
     public void walk()      {   moveSpeed = walkSpeed;     }
 
 
@@ -85,7 +87,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
 
     public float airSpeedY()    {  return rb.velocity.y; }
+
     public float jumpSpeed()    {  return jumpVelocity; }
+
     public bool isGround() {   return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);  }
 
 
@@ -116,11 +120,14 @@ public class PlayerMovement : MonoBehaviour
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         
-        if (mousePos.x >= rb.position.x) {
+        if (mousePos.x >= rb.position.x) 
+        {
             Vector3 transformScale = transform.localScale;
             transformScale.x = 1;
             transform.localScale = transformScale;
-        } else {
+
+        } else 
+        {
             Vector3 transformScale = transform.localScale;
             transformScale.x = -1;
             transform.localScale = transformScale;

@@ -38,7 +38,15 @@ public class PlayerLevel : MonoBehaviour
 
         if (XP >= lvl_XP)
             LoadStats();
+            ReloadStats();
 
+    }
+
+    private void ReloadStats()
+    {
+        GetComponent<PlayerMovement>().LoadStats();
+        GetComponent<PlayerLife>().LoadStats();
+        // need to do invoke load stats for attack 
     }
 
     public void CollectItem()

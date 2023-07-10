@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using DataAssets;
+using SkillSystem;
 
 namespace Level
 {
@@ -12,6 +13,9 @@ namespace Level
     {
         // Reference to playerStats
         [SerializeField] PlayerStats playerStats;
+
+        // Reference to Skill system
+        [SerializeField] SkillManager skillManager;
         
         // Scene GUI
         GameObject GUI;
@@ -48,12 +52,7 @@ namespace Level
         void LevelUp() 
         {
             curr_lvl++;
-            IncreasePlayerStats();
-        }
-
-        void IncreasePlayerStats()
-        {
-
+            skillManager.AddSkillPoint();
         }
 
         // Initialization 

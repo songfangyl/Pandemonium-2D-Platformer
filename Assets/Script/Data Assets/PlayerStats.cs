@@ -15,16 +15,22 @@ namespace DataAssets
         // Base stats 
         
         [SerializeField] private int baseHealth = 100;
+
         [SerializeField] private int baseAttack = 10;
+
         [SerializeField] private float baseSpeed = 7f;
+
         [SerializeField] private float baseJumpSpeed = 5f;
 
 
         // Stats after levelling && Equipment
 
         private int health;
+
         private int attack;
+
         private float speed;
+
         private float jumpSpeed;
 
         private void LevelScaling () 
@@ -51,6 +57,9 @@ namespace DataAssets
                     
         }
         
+
+        // Getter 
+
         public int Health() 
         {
             return health;

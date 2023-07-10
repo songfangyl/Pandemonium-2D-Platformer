@@ -9,21 +9,33 @@ using DataAssets;
 public class PlayerLife : MonoBehaviour
 {
     private Animator anim;
+
     private Rigidbody2D rb;
+
+    // to load health stats for player object
     [SerializeField] private PlayerStats playerStats;
 
-    private void LoadStats()
+    public void LoadStats()
     {
         playerStats.initialize();
 
         maxHP = playerStats.Health();
-        HP = maxHP;
+
+        // we only set HP to Max when initializing player
+        if (firstLoadStats)
+            HP = maxHP;
     }
 
     public int HP;
+
     public int maxHP;
+
+    private bool firstLoadStats = true;
+
     private bool isDead = false;
+
     private bool alreadyDie = false;
+
     [SerializeField] private Text LifeText; 
 
 
@@ -32,6 +44,7 @@ public class PlayerLife : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         LoadStats();
+        firstLoadStats = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
