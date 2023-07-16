@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using DataAssets;
 using SkillSystem;
+using SaveSystem;
 
 namespace Level
 {
@@ -17,9 +18,7 @@ namespace Level
         // Reference to Skill system
         [SerializeField] SkillManager skillManager;
         
-        // Scene GUI
-        GameObject GUI;
-
+        [SerializeField] SaveManager saveManager;
 
         // stats for the level system
         private int total_exp;
@@ -41,11 +40,13 @@ namespace Level
         }
 
 
+        // invoked only after quest complete (need modification)
         public void GainXP (int xp) 
         {
             total_exp += xp;
             if (nextLevel())
                 LevelUp();
+            saveManager.SaveGame();
         }
         
         // invoke level up event by player -> change player stats 
@@ -59,8 +60,13 @@ namespace Level
         // need to modify to read save file after implemnting save/load
         void Awake() 
         {
-            total_exp = 0;
-            curr_lvl = 1;
+            if (saveManager.save == null) 
+                saveManager.LoadGame();
+
+            SaveData save = saveManager.save;
+
+            total_exp = save.total_exp;
+            curr_lvl = save.curr_lvl;
         }
 
 

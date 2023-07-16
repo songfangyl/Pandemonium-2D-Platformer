@@ -7,9 +7,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faaa6dde90375a14e9b07b459d883c53, type: 3}
   m_Name: Level Manager
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: ca822f4971e321c4fb5fac1b5e341bdf, type: 2}
+  skillManager: {fileID: 11400000, guid: 9243d130a2db01541bc1e63f9d03922e, type: 2}
+  saveManager: {fileID: 11400000, guid: 11cf158492ecced46b4ed31da90c18eb, type: 2}

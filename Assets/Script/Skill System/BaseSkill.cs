@@ -8,6 +8,8 @@ namespace SkillSystem
     public abstract class BaseSkill : ScriptableObject 
     {
 
+        new private string name;
+        
         private bool unlocked = false;
 
         [SerializeField] private BaseSkill prev;
@@ -30,5 +32,9 @@ namespace SkillSystem
             unlocked = true;
         }
 
+        public string Name()
+        {
+            return name;
+        }
     }
 }
