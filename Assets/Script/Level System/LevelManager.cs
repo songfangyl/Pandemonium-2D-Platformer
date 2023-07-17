@@ -27,11 +27,18 @@ namespace Level
 
         private int MAX_LVL = 15; // Constant for Max Lvl
 
+        public int currentLevelExp()
+        {
+            return total_exp - (int)(Math.Pow(curr_lvl - 1, 2) * 4.89 + 100);
+        }
 
-
+        public int currentLevelMaxExp()
+        {
+            return (int)(Math.Pow(curr_lvl,2) * 4.89 + 100);
+        }
         public int expToNextLevel () 
         {
-            return (int)(Math.Pow(curr_lvl - 1, 2) * 4.89 + 100 - total_exp);
+            return (int)(Math.Pow(curr_lvl, 2) * 4.89 + 100 - total_exp);
         } 
 
         private bool nextLevel()
