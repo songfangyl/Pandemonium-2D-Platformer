@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 11400000, guid: 5b236d6fd9fde15439d2eefa9c6378a5, type: 2}
   enemyStats: {fileID: 11400000, guid: 1bbba0c6b756b2d4f8ecc583a7ce6492, type: 2}
-  questList: []
+  questList:
+  - {fileID: 11400000, guid: 2cc931232eaf590459007b1cec516cde, type: 2}
   saveManager: {fileID: 11400000, guid: 11cf158492ecced46b4ed31da90c18eb, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7af552e2e0bae48b0ffb17a1cfe1d0, type: 3}
+  m_Name: QuestLevel1
+  m_EditorClassIdentifier: 
+  required_level: 0
+  required_quest: []
+  quest_name: Level 1 Moon Base Infiltration
+  description: Infiltrate a demon-infested moon base, rescue researchers, and fight
+    your way out in a relentless battle for survival.
+  reward_XP: 350

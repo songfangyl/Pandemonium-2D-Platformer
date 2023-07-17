@@ -23,8 +23,8 @@ public class PlayerLevel : MonoBehaviour
      void Awake() 
     {
         LoadStats();
-        ExpSlider.maxValue = levelManager.expToNextLevel();
-        ExpSlider.value = 0;
+        ExpSlider.maxValue = levelManager.currentLevelMaxExp();
+        ExpSlider.value = levelManager.currentLevelExp();
         LevelText.text = "LVL " + lvl;
     }
 
@@ -33,8 +33,6 @@ public class PlayerLevel : MonoBehaviour
         lvl = levelManager.lvl();
         XP = levelManager.XP();
         lvl_XP = levelManager.Lvl_XP();
-        ExpSlider.maxValue = levelManager.expToNextLevel();
-        ExpSlider.value = 0;
     }
 
     // need to implement amount of XP earned
@@ -45,8 +43,6 @@ public class PlayerLevel : MonoBehaviour
         levelManager.GainXP(XP_earned);
 
         XP += XP_earned;
-
-        ExpSlider.value += XP_earned;
 
         if (XP >= lvl_XP)
             LoadStats();
@@ -68,8 +64,6 @@ public class PlayerLevel : MonoBehaviour
         levelManager.GainXP(XP_earned);
 
         XP += XP_earned;
-
-        ExpSlider.value += XP_earned;
 
         if (XP >= lvl_XP)
             LoadStats();
