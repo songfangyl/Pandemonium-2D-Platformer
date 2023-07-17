@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7af552e2e0bae48b0ffb17a1cfe1d0, type: 3}
+  m_Name: QuestLevel5
+  m_EditorClassIdentifier: 
+  required_level: 4
+  required_quest:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  quest_name: Level 5 The Final Confrontation
+  description: The stage is set for the ultimate showdown between the forces of Elsinore
+    and the demon lord who orchestrated the invasion. In the final level, you face
+    off against the powerful demonic entity in a climactic battle to determine the
+    fate of both realms. The battlefield is a nightmarish landscape, with demonic
+    energies crackling in the air and destruction all around. Unleash your most devastating
+    abilities, utilize advanced weaponry, and employ clever tactics to defeat the
+    demon lord and close the portal to hell once and for all. The outcome of this
+    battle will shape the future of Elsinore and its inhabitants.
+  reward_XP: 8888

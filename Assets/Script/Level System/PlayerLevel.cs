@@ -44,8 +44,6 @@ public class PlayerLevel : MonoBehaviour
 
         XP += XP_earned;
 
-        ExpSlider.value += XP_earned;
-
         if (XP >= lvl_XP)
             LoadStats();
             ReloadStats();
@@ -66,8 +64,6 @@ public class PlayerLevel : MonoBehaviour
         levelManager.GainXP(XP_earned);
 
         XP += XP_earned;
-
-        ExpSlider.value += XP_earned;
 
         if (XP >= lvl_XP)
             LoadStats();
