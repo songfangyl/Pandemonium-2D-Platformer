@@ -16,11 +16,6 @@ MonoBehaviour:
   required_quest:
   - {fileID: 0}
   quest_name: Level 2 Evacuation Route
-  description: With the researchers safely in your custody, your next task is to
-    lead the evacuation from the moon base. The demons have launched a relentless
-    assault, and you must fight your way through their ranks to reach the designated
-    extraction point. The path is fraught with peril, as demonic entities lurk around
-    every corner. Utilize your weaponry, teamwork, and strategic maneuvers to overcome
-    the demonic forces blocking your way. The survival of the researchers and the
-    future of Elsinore depend on your successful evacuation.
+  description: Lead the escape from the moon base, battling demons while ensuring
+    the safety of rescued researchers on a treacherous path to freedom.
   reward_XP: 800

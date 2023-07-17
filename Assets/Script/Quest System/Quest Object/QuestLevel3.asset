@@ -17,12 +17,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   quest_name: Level 3 Battle for Elsinore
-  description: The demonic invasion has reached Elsinore, and the once-great city
-    is now a battleground. As part of the Empire Army, you are at the forefront of
-    the defense, fighting alongside your fellow soldiers against the relentless onslaught
-    of demons. The city streets are in chaos, buildings are crumbling, and the skies
-    are filled with ferocious demon creatures. Engage in intense firefights, navigate
-    through war-torn environments, and protect key strategic locations from demonic
-    incursions. The fate of Elsinore hangs in the balance, and you must demonstrate
-    your valor and skill to repel the demon army.
+  description: Defend Elsinore from demonic hordes in intense urban warfare, utilizing
+    strategy, firepower, and teamwork to protect the city from annihilation.
   reward_XP: 1550

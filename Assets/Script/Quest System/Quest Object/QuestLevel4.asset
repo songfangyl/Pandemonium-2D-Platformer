@@ -18,11 +18,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   quest_name: Level 4 Descent into the Abyss
-  description: In order to close the portal to hell, you must embark on a dangerous
-    mission to descend into the depths of the demonic realm itself. Equipped with
-    advanced technology and powerful spells, you and your team venture into the abyss
-    to locate the source of the demonic invasion. Traverse through twisted landscapes,
-    encounter grotesque creatures, and solve intricate puzzles to navigate the demonic
-    labyrinth. This level is filled with suspense and supernatural challenges as
-    you delve deeper into the heart of darkness.
+  description: Journey into the heart of the demonic realm, navigating perilous landscapes
+    and confronting terrifying creatures in a high-stakes mission to halt the invasion.
   reward_XP: 2550

@@ -19,12 +19,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   quest_name: Level 5 The Final Confrontation
-  description: The stage is set for the ultimate showdown between the forces of Elsinore
-    and the demon lord who orchestrated the invasion. In the final level, you face
-    off against the powerful demonic entity in a climactic battle to determine the
-    fate of both realms. The battlefield is a nightmarish landscape, with demonic
-    energies crackling in the air and destruction all around. Unleash your most devastating
-    abilities, utilize advanced weaponry, and employ clever tactics to defeat the
-    demon lord and close the portal to hell once and for all. The outcome of this
-    battle will shape the future of Elsinore and its inhabitants.
+  description: Engage in an epic, climactic battle against the all-powerful demon
+    lord, wielding your arsenal of weapons and abilities to decide the fate of Elsinore
+    and the realms beyond.
   reward_XP: 8888

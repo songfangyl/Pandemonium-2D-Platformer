@@ -15,12 +15,6 @@ MonoBehaviour:
   required_level: 0
   required_quest: []
   quest_name: Level 1 Moon Base Infiltration
-  description: As a soldier of Damocles, your first mission is to infiltrate the
-    moon base, which was once a thriving research facility but is now overrun by
-    demons. Your objective is to rescue the remaining researchers and escort them
-    safely back to Elsinore. The moon base is filled with treacherous corridors,
-    dark hallways, and hordes of demonic creatures. Use your combat skills and tactical
-    expertise to eliminate the demons and secure the base. Be prepared for intense
-    battles as you navigate through the moon base, setting the stage for the upcoming
-    war.
+  description: Infiltrate a demon-infested moon base, rescue researchers, and fight
+    your way out in a relentless battle for survival.
   reward_XP: 350
