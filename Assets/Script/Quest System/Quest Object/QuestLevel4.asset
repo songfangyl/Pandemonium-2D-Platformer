@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7af552e2e0bae48b0ffb17a1cfe1d0, type: 3}
   m_Name: QuestLevel4
   m_EditorClassIdentifier: 
-  required_level: 3
-  required_quest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  required_level: 4
+  required_quest: []
   quest_name: Level 4 Descent into the Abyss
   description: Journey into the heart of the demonic realm, navigating perilous landscapes
     and confronting terrifying creatures in a high-stakes mission to halt the invasion.

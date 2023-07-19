@@ -8,7 +8,7 @@ namespace SkillSystem
     public abstract class BaseSkill : ScriptableObject 
     {
 
-        new private string name;
+        [SerializeField] new private string name;
         
         private bool unlocked = false;
 
