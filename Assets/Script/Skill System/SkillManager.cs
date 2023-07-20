@@ -21,18 +21,33 @@ namespace SkillSystem
 
         private BaseSkill skill_2;
 
-        private int skillPoint = 0;
+        [SerializeField] private int skillPoint = 0;
 
         public void AssignSkill_1(BaseSkill skill)
         {
-            skill_1 = skill;
-            saveManager.SaveGame();
+            if (skill.isUnlocked()) 
+            {
+                skill_1 = skill;
+                saveManager.SaveGame();
+            }
+            else
+            {
+                Debug.Log("Skill have to be unlocked first");
+            }
         }
 
         public void AssignSkill_2(BaseSkill skill)
         {
-            skill_2 = skill;
-            saveManager.SaveGame();
+            if (skill.isUnlocked())
+            { 
+                skill_2 = skill;
+                saveManager.SaveGame();
+            }
+            else
+            {
+                Debug.Log("Skill have to be unlocked first");
+            }
+            
         }
 
         public void AddSkillPoint()
@@ -42,17 +57,25 @@ namespace SkillSystem
 
         public void UnlockSkill(BaseSkill skill)
         {
-             if (skillPoint > 0) 
-             {
-                skillPoint --;
-                skill.Unlock();
-                saveManager.SaveGame();
-             }
-             else 
-             {
-                // Implement a prompt 
-                Debug.Log("Not enough skill point");
-             }
+            if (skill.canUnlock() && skill.isUnlocked() == false)
+            {
+                if (skillPoint > 0) 
+                {
+                    skillPoint --;
+                    skill.Unlock();
+                    saveManager.SaveGame();
+                }
+                else 
+                {
+                    // Implement a prompt 
+                    Debug.Log("Not enough skill point");
+                }
+            }
+            else
+            {
+                Debug.Log("You cannot unlock this skill/ already unlock this skill");
+            }
+             
         }
 
         public BaseSkill Skill_1()
@@ -114,6 +137,16 @@ namespace SkillSystem
             {
                 skillDictionary[skillName].Unlock();
             }
+        }
+
+        public BaseSkill GetSkill1()
+        {
+            return skill_1;
+        }
+
+        public BaseSkill GetSkill2()
+        {
+            return skill_2;
         }
     }
 }

@@ -7,11 +7,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185c9a98b5da3b643b3e64ac4cce9ea9, type: 3}
-  m_Name: Skill Manager
+  m_Script: {fileID: 11500000, guid: 8dfa4b5aec5abba409cc9d778b574247, type: 3}
+  m_Name: PoisonSkill
   m_EditorClassIdentifier: 
-  saveManager: {fileID: 11400000, guid: 11cf158492ecced46b4ed31da90c18eb, type: 2}
-  skills: []
-  skillPoint: 0
+  name: Poison
+  prev: {fileID: 11400000, guid: d864a34610f297243b51fcf834f67670, type: 2}

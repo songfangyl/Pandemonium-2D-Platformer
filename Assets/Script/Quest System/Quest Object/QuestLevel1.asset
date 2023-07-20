@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7af552e2e0bae48b0ffb17a1cfe1d0, type: 3}
   m_Name: QuestLevel1
   m_EditorClassIdentifier: 
-  required_level: 0
+  required_level: 1
   required_quest: []
   quest_name: Level 1 Moon Base Infiltration
   description: Infiltrate a demon-infested moon base, rescue researchers, and fight
