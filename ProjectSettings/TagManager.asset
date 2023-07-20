@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Orange
   - Trap
-  - Ladder
   layers:
   - Default
   - TransparentFX

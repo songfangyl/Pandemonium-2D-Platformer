@@ -26,11 +26,13 @@ namespace SkillSystem
         public void AssignSkill_1(BaseSkill skill)
         {
             skill_1 = skill;
+            saveManager.SaveGame();
         }
 
         public void AssignSkill_2(BaseSkill skill)
         {
             skill_2 = skill;
+            saveManager.SaveGame();
         }
 
         public void AddSkillPoint()
@@ -44,6 +46,7 @@ namespace SkillSystem
              {
                 skillPoint --;
                 skill.Unlock();
+                saveManager.SaveGame();
              }
              else 
              {

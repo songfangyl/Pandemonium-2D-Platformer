@@ -14,12 +14,14 @@ namespace DataAssets
         [SerializeField] private int baseHealth = 15;
         [SerializeField] private float baseSpeed = 5f;
         [SerializeField] private int baseAttack = 4;
+        [SerializeField] private int baseXP = 30;
 
 
         // Difficulty scaling 
         private int health;
         private float speed;
         private int attack;
+        private int XP;
 
         public void IncreaseDifficulty() 
         {
@@ -27,6 +29,7 @@ namespace DataAssets
             health = baseHealth;
             speed = baseSpeed;
             attack = baseAttack;
+            XP = baseXP;
         }
 
         public int Health()
@@ -42,6 +45,11 @@ namespace DataAssets
         public int Attack()
         {
             return attack;
+        }
+
+        public int XPearned()
+        {
+            return XP;
         }
     }
 }

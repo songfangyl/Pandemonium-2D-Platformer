@@ -1,5 +1,6 @@
 using UnityEngine;
 using Level;
+using QuestSystem;
 
 namespace AI.FSM.Activities
 {
@@ -10,19 +11,19 @@ namespace AI.FSM.Activities
  
         EnemyState enemyState;
 
-        private GameObject player;
+        [SerializeField] QuestManager questManager;
  
         public override void Enter(BaseStateMachine stateMachine)
         {
-            // Gaining EXP
-            player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<PlayerLevel>().KillEnemy();
 
             //Animation for death
             enemyState = stateMachine.GetComponent<EnemyState>();
             stateMachine.GetComponent<Animator>().Play("Death");
             stateMachine.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
- 
+
+            // Gaining EXP
+            questManager.KillEnemy(enemyState.XPearned());
+            
             // stateMachine.GetComponent<AudioSource>().PlayOneShot(deadClip);
         }
  

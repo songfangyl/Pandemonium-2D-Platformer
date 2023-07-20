@@ -19,9 +19,11 @@ namespace QuestSystem
 
         [SerializeField] private SaveManager saveManager;
 
-        // implement a hash set to keep track of done quest, and to interact with save system
-
         private Dictionary<string, Quest> questDictionary;
+
+        private int EnemyXP;
+        
+        private int CollectedXP;
 
         // all methods are intended to be invoked by either the GUI for quest menu or when the quest is completed
 
@@ -31,6 +33,8 @@ namespace QuestSystem
             // need to implement difficulty scaling 
             enemyStats.IncreaseDifficulty();
             SceneManager.LoadScene(quest.Quest_id());
+            EnemyXP = 0;
+            CollectedXP = 0;
         }
 
         // to indicate if the quest is do-able at GUI
@@ -41,7 +45,7 @@ namespace QuestSystem
         
         public void CompleteQuest(Quest quest)
         {
-            levelManager.GainXP(quest.Reward());
+            levelManager.GainXP(quest.Reward() + EnemyXP + CollectedXP);
             quest.CompleteQuest();
             saveManager.SaveGame();
         }
@@ -57,6 +61,16 @@ namespace QuestSystem
             }
 
             return res;
+        }
+
+        public void KillEnemy(int XP)
+        {
+            EnemyXP += XP;
+        }
+
+        public void CollectItem(int XP)
+        {
+            CollectedXP += XP;
         }
 
         void Awake() 

@@ -46,6 +46,7 @@ namespace Control
                     foreach (Collider2D hitTarget in hitTargets)
                     {
                         playerStats.initialize();
+                        Debug.Log(playerStats.Attack());
                         hitTarget.GetComponent<EnemyState>().takeDamage(playerStats.Attack());
                         hitTarget.GetComponent<EnemyState>().hitDir = hitTarget.transform.position - gameObj.transform.position;
                         hitTarget.GetComponent<EnemyState>().isHit = true;

@@ -13,6 +13,7 @@ public class EnemyState : MonoBehaviour
         maxHP = enemyStats.Health();
         HP = maxHP;
         attack = enemyStats.Attack();
+        XP = enemyStats.XPearned();
 
     }
 
@@ -27,6 +28,8 @@ public class EnemyState : MonoBehaviour
     private int maxHP;
 
     private int attack;
+
+    private int XP;
   
     // Information for executing attack
     public LayerMask enemyLayer;
@@ -93,5 +96,10 @@ public class EnemyState : MonoBehaviour
     public int getHP()
     {
         return HP;
+    }
+
+    public int XPearned()
+    {
+        return XP;
     }
 }
