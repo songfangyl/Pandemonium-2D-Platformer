@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &61637380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4727471516271516127, guid: 0483b3be4a7f9d5498e94acdb5113549, type: 3}
+  m_PrefabInstance: {fileID: 1763502703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048af5489c181a745b81a4e5572f91c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &72743447 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7644205645803555751, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
@@ -657,6 +668,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.00090009003
       objectReference: {fileID: 0}
+    - target: {fileID: 4740423360684987659, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 61637380}
+    - target: {fileID: 4740423360684987659, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740423360684987669, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4740423361693508346, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -229
@@ -668,6 +691,14 @@ PrefabInstance:
     - target: {fileID: 4740423361693508347, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5353313833798728460, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 61637380}
+    - target: {fileID: 5353313833798728460, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Hover
       objectReference: {fileID: 0}
     - target: {fileID: 5463556899658108930, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
       propertyPath: m_AnchorMax.x
@@ -769,6 +800,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8521560128039667107, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 61637380}
+    - target: {fileID: 8521560128039667107, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Click
+      objectReference: {fileID: 0}
     - target: {fileID: 8521560128039667132, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
       propertyPath: m_Pivot.x
       value: 0.4999998
@@ -787,11 +826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8521560128039667132, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 259
+      value: 304
       objectReference: {fileID: 0}
     - target: {fileID: 8521560128039667132, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 81
+      value: 132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c2a066b59c29b4b832d28466b7c409, type: 3}

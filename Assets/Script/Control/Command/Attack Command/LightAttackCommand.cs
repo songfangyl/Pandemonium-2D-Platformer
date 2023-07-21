@@ -16,7 +16,7 @@ namespace Control
         public LayerMask enemyLayer;     
         bool attack = false;
         int executionNumber = 0;
-        public float attackRange = 1f;
+        public float attackRange = 1.5f;
         GameObject gameObj;
 
         public override void Execute(InputAction action, GameObject player) 
