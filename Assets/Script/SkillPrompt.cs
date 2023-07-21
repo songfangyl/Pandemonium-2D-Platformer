@@ -20,12 +20,26 @@ public class SkillPrompt : MonoBehaviour
 
     [SerializeField] private Text equipmentText2;
 
+    [SerializeField] private Button unlock;
+
+    [SerializeField] private Button equip1;
+
+    [SerializeField] private Button equip2;
+
     public void InitiateButton(GameObject button) 
     {
         skillButton = button;
         skill = button.GetComponent<AddSkillButton>().GetSkill();
         script = button.GetComponent<AddSkillButton>();
     }
+
+    public void ActiveButtons()
+    {
+        unlock.interactable = true;
+        equip1.interactable = true;
+        equip2.interactable = true;
+    }
+
     void Start()
     {
         UpdateEquipmentText1();

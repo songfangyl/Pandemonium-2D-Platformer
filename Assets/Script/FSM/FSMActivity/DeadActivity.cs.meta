@@ -3,7 +3,8 @@ guid: 5c9ce8b51bafe08429bb6b18ce388825
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - questManager: {fileID: 11400000, guid: 996cf4aec5e35f74aaa50f5504af3bad, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
