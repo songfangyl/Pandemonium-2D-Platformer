@@ -13,8 +13,17 @@ namespace Control
         {
             PlayerMovement script = player.GetComponent<PlayerMovement>();
             bool active = action.ReadValue<float>() != 0;
+            bool played = false;
 
             script.crouch(active);
+
+            if (active && !played && action.WasPressedThisFrame())
+            {
+                player.GetComponent<PlayerAudio>().Crouch();
+                played = true;
+            }
+            else if (!active)
+                played = false;
         }
     }
 }

@@ -26,9 +26,13 @@ namespace Control
                 attack = true;
             }
   
-            if(attack) {
+            if(attack) 
                 gameObj.GetComponent<Animator>().Play("Attack1");
-            }
+            
+            if (attack && action.WasPressedThisFrame())
+                gameObj.GetComponent<PlayerAudio>().Attack();
+                    
+                
         }
 
         // invoked at animation to be precise to the frames
@@ -42,7 +46,7 @@ namespace Control
                 {
                     gameObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     Collider2D[] hitTargets = Physics2D.OverlapCircleAll(gameObj.transform.GetChild(0).position, attackRange, enemyLayer);
-    
+                    
                     foreach (Collider2D hitTarget in hitTargets)
                     {
                         Debug.Log("Hit");
