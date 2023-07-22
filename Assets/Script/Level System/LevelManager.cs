@@ -51,7 +51,7 @@ namespace Level
         public void GainXP (int xp) 
         {
             total_exp += xp;
-            if (nextLevel())
+            while (nextLevel())
                 LevelUp();
             saveManager.SaveGame();
         }

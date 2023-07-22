@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b4b2c433f8a7244894152d1b163a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questManager: {fileID: 11400000, guid: 996cf4aec5e35f74aaa50f5504af3bad, type: 2}
+  quest: {fileID: 0}

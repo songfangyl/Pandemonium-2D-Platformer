@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 85edbacadc07d1d44a23fe6dab5b2541
   - enabled: 1
-    path: Assets/Scenes/Level 1 Moon Base Infiltration.unity
+    path: Assets/Scenes/Level 3 Battle for Elsinore.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
@@ -26,5 +26,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2 Evacuation Route.unity
     guid: b8e6b6e168ba8b24aafa3837f05d6927
+  - enabled: 1
+    path: Assets/Scenes/Level 1 Moon Base Infiltration.unity
+    guid: f23af55cf1fe1854daef15ed40399785
+  - enabled: 1
+    path: Assets/Scenes/Level 4 The Final Confrontation.unity
+    guid: bb2d7150e29a4c545b9065eb49008e1e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e3942e3b4ace6d646a06a38a1622c1e1, type: 2}

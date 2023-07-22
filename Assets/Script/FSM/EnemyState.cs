@@ -1,5 +1,6 @@
 using UnityEngine;
 using DataAssets;
+using UnityEngine.UI;
  
 public class EnemyState : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class EnemyState : MonoBehaviour
     public float hitTimer = 0, deadTimer = 0, attackRange = 1f;
 
     public Vector2 hitDir = Vector2.zero;
+
+    [SerializeField] private GameObject endPoint;
+
+    [SerializeField] private Text endPointText;
     
 
 
@@ -101,5 +106,12 @@ public class EnemyState : MonoBehaviour
     public int XPearned()
     {
         return XP;
+    }
+
+    // Death animation function for Boss()
+    public void createEndPoint()
+    {
+        endPoint.SetActive(true);
+        endPointText.text = "Congrats!! \n End Point is created somewhere!";
     }
 }

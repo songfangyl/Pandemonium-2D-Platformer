@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   required_level: 4
   required_quest: []
-  quest_name: Level 4 Descent into the Abyss
-  description: Journey into the heart of the demonic realm, navigating perilous landscapes
-    and confronting terrifying creatures in a high-stakes mission to halt the invasion.
+  quest_name: Level 4 The Final Confrontation
+  description: Engage in an epic, climactic battle against the all-powerful demon
+    lord, wielding your arsenal of weapons and abilities to decide the fate of Elsinore
+    and the realms beyond.
   reward_XP: 2550

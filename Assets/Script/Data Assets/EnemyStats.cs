@@ -13,6 +13,8 @@ namespace DataAssets
         // Base stats
         [SerializeField] private int baseHealth = 15;
         [SerializeField] private float baseSpeed = 5f;
+
+        [SerializeField] private float chaseSpeed = 10f;
         [SerializeField] private int baseAttack = 4;
         [SerializeField] private int baseXP = 30;
 
@@ -50,6 +52,11 @@ namespace DataAssets
         public int XPearned()
         {
             return XP;
+        }
+
+        public float ChaseSpeed()
+        {
+            return chaseSpeed;
         }
     }
 }

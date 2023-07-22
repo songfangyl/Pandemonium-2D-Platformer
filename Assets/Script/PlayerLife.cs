@@ -53,7 +53,7 @@ public class PlayerLife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Trap")) {
-            subtractHP(1);
+            subtractHP(3);
         }
     }
 

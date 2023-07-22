@@ -11,7 +11,6 @@ namespace AI.FSM.Activities
  
         public override void Enter(BaseStateMachine stateMachine)
         {
-            Debug.Log("ChaseActivity Enter");
             target = GameObject.FindWithTag(targetTag);
             stateMachine.GetComponent<Animator>().SetBool("isWalk", true);
         }

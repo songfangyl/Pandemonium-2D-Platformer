@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Control;
+using QuestSystem;
 
 public class EndPoint : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private QuestManager questManager;
+
+    [SerializeField] private Quest quest;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.name == "Player") 
@@ -22,7 +21,7 @@ public class EndPoint : MonoBehaviour
 
     private void CompleteLevel()
     {
-        // GameObject.Find("ControlScheme").SetActive(false);
-        SceneManager.LoadScene(2);
+        questManager.CompleteQuest(quest);
+        SceneManager.LoadScene("MainScene");
     }
 }
