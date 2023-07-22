@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("QuestScene");
+        SceneManager.LoadScene("MainScene");
         
     }
 

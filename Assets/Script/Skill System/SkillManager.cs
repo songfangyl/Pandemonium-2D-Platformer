@@ -25,6 +25,11 @@ namespace SkillSystem
 
         public void AssignSkill_1(BaseSkill skill)
         {
+            if (skill == null) 
+            {
+                return;
+            }
+            
             if (skill.isUnlocked()) 
             {
                 skill_1 = skill;
@@ -38,6 +43,11 @@ namespace SkillSystem
 
         public void AssignSkill_2(BaseSkill skill)
         {
+            if (skill == null) 
+            {
+                return;
+            }
+
             if (skill.isUnlocked())
             { 
                 skill_2 = skill;
@@ -57,6 +67,11 @@ namespace SkillSystem
 
         public void UnlockSkill(BaseSkill skill)
         {
+            if (skill == null) 
+            {
+                return;
+            }
+
             if (skill.canUnlock() && skill.isUnlocked() == false)
             {
                 if (skillPoint > 0) 

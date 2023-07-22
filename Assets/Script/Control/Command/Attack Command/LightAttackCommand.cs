@@ -16,7 +16,7 @@ namespace Control
         public LayerMask enemyLayer;     
         bool attack = false;
         int executionNumber = 0;
-        public float attackRange = 1f;
+        public float attackRange = 1.5f;
         GameObject gameObj;
 
         public override void Execute(InputAction action, GameObject player) 
@@ -49,8 +49,8 @@ namespace Control
                     
                     foreach (Collider2D hitTarget in hitTargets)
                     {
+                        Debug.Log("Hit");
                         playerStats.initialize();
-                        Debug.Log(playerStats.Attack());
                         hitTarget.GetComponent<EnemyState>().takeDamage(playerStats.Attack());
                         hitTarget.GetComponent<EnemyState>().hitDir = hitTarget.transform.position - gameObj.transform.position;
                         hitTarget.GetComponent<EnemyState>().isHit = true;
