@@ -20,7 +20,8 @@ namespace Control
             {
                 playerBody.velocity = new Vector3(0,script.jumpSpeed(),0);
             }
-
+            if (jumped && action.WasPressedThisFrame())
+                player.GetComponent<PlayerAudio>().Jump();
 
         }
     }

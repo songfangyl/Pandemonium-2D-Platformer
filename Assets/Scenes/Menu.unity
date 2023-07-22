@@ -1416,7 +1416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.87715745, b: 0.6650944, a: 0.87058824}
+  m_Color: {r: 1, g: 0.90847945, b: 0.7490566, a: 0.87058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2218,11 +2218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1331099106779884379, guid: 0483b3be4a7f9d5498e94acdb5113549, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 811.0565
+      value: 593
       objectReference: {fileID: 0}
     - target: {fileID: 1331099106779884379, guid: 0483b3be4a7f9d5498e94acdb5113549, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 372.05536
+      value: 338
       objectReference: {fileID: 0}
     - target: {fileID: 1331099106779884379, guid: 0483b3be4a7f9d5498e94acdb5113549, type: 3}
       propertyPath: m_LocalPosition.z

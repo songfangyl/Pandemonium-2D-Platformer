@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9ce8b51bafe08429bb6b18ce388825, type: 3}
   m_Name: DeadActivity
   m_EditorClassIdentifier: 
-  deadClip: {fileID: 0}
+  questManager: {fileID: 11400000, guid: 996cf4aec5e35f74aaa50f5504af3bad, type: 2}
