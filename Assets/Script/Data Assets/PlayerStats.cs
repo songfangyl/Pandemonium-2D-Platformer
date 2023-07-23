@@ -37,8 +37,8 @@ namespace DataAssets
         {
             int lvl = levels.lvl();
             
-            health = (int)(lvl * baseHealth + 50 * Math.Pow(lvl - 1, 0.68));
-            attack = (int)(lvl * baseAttack + 5 * Math.Pow(lvl - 1, 0.49));
+            health = (int)(baseHealth + 20 * lvl);
+            attack = (int)(baseAttack + lvl);
             
         }
 

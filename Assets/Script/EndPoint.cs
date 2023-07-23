@@ -19,7 +19,8 @@ public class EndPoint : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.name == "Player") 
         {
-            Invoke("CompleteLevel", 1f);
+            UISource.PlayOneShot(complete);
+            Invoke("CompleteLevel", 2.5f);
             other.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
@@ -28,6 +29,5 @@ public class EndPoint : MonoBehaviour
     {
         questManager.CompleteQuest(quest);
         SceneManager.LoadScene("MainScene");
-        UISource.PlayOneShot(complete);
     }
 }
