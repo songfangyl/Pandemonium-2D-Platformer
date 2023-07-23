@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Berserk
   skillAudio: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
-  prev: {fileID: 0}
+  prev: {fileID: 11400000, guid: 1db34cf01271cf6409f78ee06bb9c2a5, type: 2}
   attackCommand: {fileID: 11400000, guid: cd15359534a0ff5408330b5a83ac6fe1, type: 2}

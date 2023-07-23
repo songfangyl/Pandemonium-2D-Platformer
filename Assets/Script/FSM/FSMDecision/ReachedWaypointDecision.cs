@@ -8,9 +8,6 @@ namespace AI.FSM.Decisions
         public override bool Decide(BaseStateMachine stateMachine)
         {
             var res = stateMachine.GetComponent<PatrolPoints>().HasReachedPoint();
-            if (res) {
-                Debug.Log("ReachPointDecision");
-            }
             return res;
         }
     }

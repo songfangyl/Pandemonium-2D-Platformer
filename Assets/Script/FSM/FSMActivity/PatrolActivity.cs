@@ -20,8 +20,6 @@ namespace AI.FSM.Activities
         {
             LoadStats();
 
-            Debug.Log("PatrolActivityEnter");
-
             var PatrolPoints   = stateMachine.GetComponent<PatrolPoints>();
 
             var SpriteRenderer = stateMachine.GetComponent<SpriteRenderer>();

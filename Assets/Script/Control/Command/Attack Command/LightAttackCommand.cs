@@ -25,7 +25,7 @@ namespace Control
 
         private int buffDamage;
 
-        private int damage = -1;
+        private int damage = 0;
 
         GameObject gameObj;
 
@@ -47,12 +47,11 @@ namespace Control
 
         public override void Execute(InputAction action, GameObject player) 
         {
+            LoadDamage();
             if (gameObj == null) gameObj = player;
-            if (damage == -1) AttackNormal();
+            if (damage == 0) AttackNormal();
             if (player.GetComponent<PlayerMovement>().isGround() && action.WasPressedThisFrame()) {
                 attack = true;
-                LoadDamage();
-                Debug.Log(damage);
             }
   
             if(attack) 
@@ -78,7 +77,6 @@ namespace Control
                     
                     foreach (Collider2D hitTarget in hitTargets)
                     {
-                        Debug.Log("Hit");
                         playerStats.initialize();
                         hitTarget.GetComponent<EnemyState>().takeDamage(damage);
                         hitTarget.GetComponent<EnemyState>().hitDir = hitTarget.transform.position - gameObj.transform.position;

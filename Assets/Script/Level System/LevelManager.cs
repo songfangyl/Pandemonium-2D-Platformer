@@ -25,20 +25,20 @@ namespace Level
 
         private int curr_lvl;
 
-        private int MAX_LVL = 15; // Constant for Max Lvl
+        private int MAX_LVL = 5; // Constant for Max Lvl
 
         public int currentLevelExp()
         {
-            return total_exp - (int)(Math.Pow(curr_lvl - 1, 2) * 4.89 + 100);
+            return total_exp - (int)(400 * curr_lvl + 100);
         }
 
         public int currentLevelMaxExp()
         {
-            return (int)(Math.Pow(curr_lvl,2) * 4.89 + 100);
+            return (int)(400 * curr_lvl + 100);
         }
         public int expToNextLevel () 
         {
-            return (int)(Math.Pow(curr_lvl, 2) * 4.89 + 100 - total_exp);
+            return (int)((400 * curr_lvl + 100) - total_exp);
         } 
 
         private bool nextLevel()
@@ -51,7 +51,7 @@ namespace Level
         public void GainXP (int xp) 
         {
             total_exp += xp;
-            while (nextLevel())
+            while (nextLevel() && curr_lvl < MAX_LVL)
                 LevelUp();
             saveManager.SaveGame();
         }
@@ -71,15 +71,19 @@ namespace Level
                 saveManager.LoadGame();
 
             SaveData save = saveManager.save;
-
+            
             total_exp = save.total_exp;
             curr_lvl = save.curr_lvl;
+            if (curr_lvl == 0) {
+                curr_lvl = 1;
+            }
         }
 
 
         // Getter
         public int lvl() 
         {
+            if (curr_lvl == 0) curr_lvl += 1;
             return curr_lvl;
         }
 

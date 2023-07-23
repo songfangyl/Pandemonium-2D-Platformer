@@ -16,7 +16,6 @@ namespace AI.FSM
                 stateMachine.CurrentState.Exit(stateMachine);
                 stateMachine.CurrentState = TrueState;
                 stateMachine.CurrentState.Enter(stateMachine);
-                Debug.Log("Change");
             }
             else if (!(FalseState is RemainInState))
             {

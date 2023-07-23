@@ -17,4 +17,4 @@ MonoBehaviour:
   quest_name: Level 2 Evacuation Route
   description: Lead the escape from the moon base, battling demons while ensuring
     the safety of rescued researchers on a treacherous path to freedom.
-  reward_XP: 800
+  reward_XP: 1000

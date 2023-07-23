@@ -21,6 +21,10 @@ namespace SkillSystem
         // invoked at Skill Manager when Skill 1 & 2 is called
         public abstract void Execute (InputAction action, GameObject player);
 
+        public abstract float GetCD();
+
+        public abstract float GetEffect();
+
         public bool isUnlocked()
         {
             return unlocked;

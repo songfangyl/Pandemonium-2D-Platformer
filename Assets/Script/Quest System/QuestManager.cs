@@ -45,9 +45,12 @@ namespace QuestSystem
         
         public void CompleteQuest(Quest quest)
         {
-            levelManager.GainXP(quest.Reward() + EnemyXP + CollectedXP);
-            quest.CompleteQuest();
-            saveManager.SaveGame();
+            Debug.Log("" + levelManager.XP());
+            if (!quest.isCompleted()) {
+                levelManager.GainXP(quest.Reward() + EnemyXP + CollectedXP);
+                quest.CompleteQuest();
+                saveManager.SaveGame();
+            }    
         }
 
         public List<string> CompletedQuest()

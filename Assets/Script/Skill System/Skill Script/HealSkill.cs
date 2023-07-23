@@ -27,10 +27,22 @@ namespace SkillSystem
             } 
             else if (onCooldown)
             {
+                cooldown = 20f;
                 onCooldown = false;
             }
             
             
         }
+
+        override public float GetCD() 
+        {
+            return cooldown;
+        }
+
+        override public float GetEffect()
+        {
+            return 0;
+        }
+        
     }
 }

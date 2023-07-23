@@ -55,5 +55,16 @@ namespace SkillSystem
                 onCooldown = false;
             }
         }
+
+        override public float GetCD() 
+        {
+            return cooldown;
+        }
+
+        override public float GetEffect()
+        {
+            return effect;
+        }
+        
     }
 }

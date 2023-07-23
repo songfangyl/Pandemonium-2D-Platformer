@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Speed Boost
   skillAudio: {fileID: 8300000, guid: 6cf9c85b5a3b88c468b21b9d21250adf, type: 3}
-  prev: {fileID: 11400000, guid: d864a34610f297243b51fcf834f67670, type: 2}
+  prev: {fileID: 11400000, guid: 1db34cf01271cf6409f78ee06bb9c2a5, type: 2}

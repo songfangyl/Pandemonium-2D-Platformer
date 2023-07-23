@@ -17,4 +17,4 @@ MonoBehaviour:
   quest_name: Level 1 Moon Base Infiltration
   description: Infiltrate a demon-infested moon base, rescue researchers, and fight
     your way out in a relentless battle for survival.
-  reward_XP: 350
+  reward_XP: 500

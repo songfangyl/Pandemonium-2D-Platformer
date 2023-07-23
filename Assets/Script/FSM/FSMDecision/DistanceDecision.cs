@@ -14,9 +14,6 @@ namespace AI.FSM.Decisions
             var transform = stateMachine.GetComponent<Transform>();
             if (target == null) target = GameObject.FindWithTag(targetTag);
             var res = Vector2.Distance(transform.position, target.transform.position) >= distanceThreshold;
-            if (res) {
-                Debug.Log("DistanceDecisionTrue");
-            }
             return res;
         }
     }
