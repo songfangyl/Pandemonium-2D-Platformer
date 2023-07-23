@@ -143,24 +143,6 @@ MonoBehaviour:
       m_ExpectedControlType: Button
       m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
       m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 328c9aff-d84f-4477-b81b-23c6a21c7d9a
-        m_Path: <Keyboard>/space
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Action
-        m_Flags: 0
-      m_Flags: 0
-    command: {fileID: 11400000, guid: b431cbb277a83f24fa51c5a9de67d788, type: 2}
-  - action:
-      m_Name: Action
-      m_Type: 1
-      m_ExpectedControlType: Button
-      m_Id: 65ff98af-1d83-4ae1-8d4a-31fc131ad5ab
-      m_Processors: 
       m_Interactions: Tap
       m_SingletonActionBindings:
       - m_Name: 

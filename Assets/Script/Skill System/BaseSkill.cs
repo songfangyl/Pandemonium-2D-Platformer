@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 
 namespace SkillSystem
 {
@@ -9,13 +11,15 @@ namespace SkillSystem
     {
 
         [SerializeField] new private string name;
+
+        [SerializeField] protected AudioClip skillAudio;
         
         private bool unlocked = false;
 
         [SerializeField] private BaseSkill prev;
 
         // invoked at Skill Manager when Skill 1 & 2 is called
-        public abstract void Execute (GameObject player);
+        public abstract void Execute (InputAction action, GameObject player);
 
         public bool isUnlocked()
         {
@@ -35,6 +39,11 @@ namespace SkillSystem
         public string Name()
         {
             return name;
+        }
+
+        public AudioClip Audio()
+        {
+            return skillAudio;
         }
     }
 }

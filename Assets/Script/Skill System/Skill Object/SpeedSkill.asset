@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688bdb8f4fbda454c90e383223a06665, type: 3}
   m_Name: SpeedSkill
   m_EditorClassIdentifier: 
-  name: Speed
+  name: Speed Boost
+  skillAudio: {fileID: 8300000, guid: 6cf9c85b5a3b88c468b21b9d21250adf, type: 3}
   prev: {fileID: 11400000, guid: d864a34610f297243b51fcf834f67670, type: 2}

@@ -21,6 +21,7 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(other.gameObject);
             questManager.CollectItem(orangeXP);
+            GetComponent<PlayerAudio>().Collect();
         }    
     }
 }

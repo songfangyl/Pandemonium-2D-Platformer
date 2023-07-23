@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using SkillSystem;
 
 public class PlayerAudio : MonoBehaviour
 {
     
-    private AudioSource actionSource;
+    [SerializeField] private SkillManager skillManager;
+    
+    public AudioSource actionSource;
 
-    private AudioSource movementSource;
+    public AudioSource movementSource;
 
     void Awake()
     {
@@ -16,6 +19,9 @@ public class PlayerAudio : MonoBehaviour
 
         actionSource = sources[0];
         movementSource = sources[1];
+
+        skillAudio1 = skillManager.Audio1();
+        skillAudio2 = skillManager.Audio2();
     }
 
     
@@ -39,9 +45,9 @@ public class PlayerAudio : MonoBehaviour
 
     [SerializeField] private AudioClip hitAudio;
 
-    [SerializeField] private AudioClip skillAudio1;
+    private AudioClip skillAudio1;
 
-    [SerializeField] private AudioClip skillAudio2;
+    private AudioClip skillAudio2;
 
     [SerializeField] private AudioClip collectAudio;
 
@@ -73,7 +79,7 @@ public class PlayerAudio : MonoBehaviour
 
     public void Collect()
     {
-        
+        actionSource.PlayOneShot(collectAudio);
     }
 
     public void Move()

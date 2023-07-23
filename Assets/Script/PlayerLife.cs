@@ -89,7 +89,19 @@ public class PlayerLife : MonoBehaviour
                 alreadyDie = true;
             }
         } 
-        LifeText.text = "Life:" + HP;
+        LifeText.text = "Life: " + HP;
+        LifeSlider.value = HP;
+    }
+
+    public void Heal()
+    {
+        int temp = HP + (int)(0.2 * maxHP);
+        if (temp > maxHP)
+            HP = maxHP;
+        else 
+            HP = temp;
+
+        LifeText.text = "Life: " + HP;
         LifeSlider.value = HP;
     }
 

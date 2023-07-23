@@ -17,13 +17,13 @@ namespace Control
 
             script.crouch(active);
 
-            if (active && !played && action.WasPressedThisFrame())
-            {
-                player.GetComponent<PlayerAudio>().Crouch();
-                played = true;
-            }
-            else if (!active)
-                played = false;
+                if (active && !played && action.WasPressedThisFrame())
+                {
+                    player.GetComponent<PlayerAudio>().Crouch();
+                    played = true;
+                }
+                else if (!active)
+                    played = false;
         }
     }
 }

@@ -13,17 +13,46 @@ namespace Control
 
         [SerializeField] private PlayerStats playerStats;
 
-        public LayerMask enemyLayer;     
+        public LayerMask enemyLayer;  
+
         bool attack = false;
+
         int executionNumber = 0;
+
         public float attackRange = 1.5f;
+
+        private int baseDamage;
+
+        private int buffDamage;
+
+        private int damage = -1;
+
         GameObject gameObj;
+
+        public void LoadDamage()
+        {
+            baseDamage = playerStats.Attack();
+            buffDamage = (int)(baseDamage * 1.5);
+        }
+
+        public void AttackBuff()
+        {
+            damage = buffDamage;
+        }
+
+        public void AttackNormal()
+        {
+            damage = baseDamage;
+        }
 
         public override void Execute(InputAction action, GameObject player) 
         {
             if (gameObj == null) gameObj = player;
+            if (damage == -1) AttackNormal();
             if (player.GetComponent<PlayerMovement>().isGround() && action.WasPressedThisFrame()) {
                 attack = true;
+                LoadDamage();
+                Debug.Log(damage);
             }
   
             if(attack) 
@@ -51,7 +80,7 @@ namespace Control
                     {
                         Debug.Log("Hit");
                         playerStats.initialize();
-                        hitTarget.GetComponent<EnemyState>().takeDamage(playerStats.Attack());
+                        hitTarget.GetComponent<EnemyState>().takeDamage(damage);
                         hitTarget.GetComponent<EnemyState>().hitDir = hitTarget.transform.position - gameObj.transform.position;
                         hitTarget.GetComponent<EnemyState>().isHit = true;
 

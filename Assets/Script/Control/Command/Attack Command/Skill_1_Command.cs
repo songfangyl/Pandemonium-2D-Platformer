@@ -13,11 +13,7 @@ namespace Control
 
         public override void Execute(InputAction action, GameObject player) 
         {
-            if (action.triggered) 
-            {
-                skillManager.Execute_1(player);
-            }   
-
+            skillManager.Execute_1(action, player);
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Level;
 using SaveSystem;
 
@@ -20,6 +21,8 @@ namespace SkillSystem
         private BaseSkill skill_1;
 
         private BaseSkill skill_2;
+
+        [SerializeField] private AudioClip defaultSFX;
 
         [SerializeField] private int skillPoint = 0;
 
@@ -103,6 +106,22 @@ namespace SkillSystem
             return skill_2;
         }
 
+        public AudioClip Audio1()
+        {
+            if(skill_1 != null)
+                return Skill_1().Audio();
+            else  
+                return defaultSFX;
+        }
+
+        public AudioClip Audio2()
+        {
+            if(skill_2 != null)
+                return Skill_2().Audio();
+            else  
+                return defaultSFX;
+        }
+
         public int SkillPoint()
         {
             return skillPoint;
@@ -121,16 +140,16 @@ namespace SkillSystem
             return res;
         }
 
-        public void Execute_1(GameObject player) 
+        public void Execute_1(InputAction action, GameObject player) 
         {
             if (skill_1 != null)
-                skill_1.Execute(player); 
+                skill_1.Execute(action, player); 
         }
 
-        public void Execute_2(GameObject player) 
+        public void Execute_2(InputAction action, GameObject player) 
         {
             if (skill_2 != null)
-                skill_2.Execute(player);
+                skill_2.Execute(action, player);
         }
           
 

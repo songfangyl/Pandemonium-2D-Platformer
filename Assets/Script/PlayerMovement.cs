@@ -78,6 +78,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void walk()      {   moveSpeed = walkSpeed;     }
 
+    public void SpeedBoost()
+    {
+        walkSpeed *= 1.3f;
+        sprintSpeed *= 1.3f;
+    }
+
+    public void SlowDown()
+    {
+        walkSpeed /= 1.3f;
+        sprintSpeed /= 1.3f;
+    }
+
 
 
     // player jumping 
