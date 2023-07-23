@@ -64,7 +64,7 @@ namespace SaveSystem
 
         public void LoadGame()
         {
-            if (File.Exists(DIRECTORY))
+            if (File.Exists(Application.persistentDataPath + DIRECTORY))
             {
                 BinaryFormatter bf = new BinaryFormatter();
 

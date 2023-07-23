@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Skill Manager
   m_EditorClassIdentifier: 
   saveManager: {fileID: 11400000, guid: 11cf158492ecced46b4ed31da90c18eb, type: 2}
-  skills: []
-  skill_1: {fileID: 11400000, guid: 366880709d9e759459b3ed780b9880d2, type: 2}
+  skills:
+  - {fileID: 11400000, guid: 1db34cf01271cf6409f78ee06bb9c2a5, type: 2}
+  - {fileID: 11400000, guid: 366880709d9e759459b3ed780b9880d2, type: 2}
+  - {fileID: 11400000, guid: ed6fb7a0ab4cdb44ab7c72ccee917815, type: 2}
   defaultSFX: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
   skillPoint: 0

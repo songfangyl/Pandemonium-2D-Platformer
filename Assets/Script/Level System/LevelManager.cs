@@ -29,16 +29,16 @@ namespace Level
 
         public int currentLevelExp()
         {
-            return total_exp - (int)(400 * curr_lvl + 100);
+            return total_exp - (int)(500 * curr_lvl + 10);
         }
 
         public int currentLevelMaxExp()
         {
-            return (int)(400 * curr_lvl + 100);
+            return (int)(500 * curr_lvl + 10);
         }
         public int expToNextLevel () 
         {
-            return (int)((400 * curr_lvl + 100) - total_exp);
+            return (int)((500 * curr_lvl + 10) - total_exp);
         } 
 
         private bool nextLevel()
@@ -83,7 +83,7 @@ namespace Level
         // Getter
         public int lvl() 
         {
-            if (curr_lvl == 0) curr_lvl += 1;
+            if (curr_lvl == 0) curr_lvl = 1;
             return curr_lvl;
         }
 
