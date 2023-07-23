@@ -28,11 +28,14 @@ namespace SaveSystem
         public void SaveGame()
         {
 
-            BinaryFormatter bf = new BinaryFormatter();
+            //BinaryFormatter bf = new BinaryFormatter();
 
-            FileStream file = File.Create(Application.persistentDataPath + DIRECTORY);
+            string filePath = Application.persistentDataPath + DIRECTORY;
 
-            save = new SaveData();
+            //FileStream file = File.Create(Application.persistentDataPath + DIRECTORY);
+
+            // create save data    
+            SaveData saveData = new SaveData();
 
             save.total_exp = levelManager.XP();
 
@@ -40,11 +43,11 @@ namespace SaveSystem
 
             BaseSkill skill1 = skillManager.Skill_1();
 
-            save.skill_1 = skill1 == null ? null : skill1.Name();
+            save.skill_1 = skill1 == null ? "" : skill1.Name();
 
             BaseSkill skill2 = skillManager.Skill_2();
 
-            save.skill_2 = skill2 == null ? null : skill2.Name();
+            save.skill_2 = skill2 == null ? "" : skill2.Name();
 
             save.skill_point = skillManager.SkillPoint();;
 
@@ -52,9 +55,15 @@ namespace SaveSystem
 
             save.doneQuest = questManager.CompletedQuest();
 
-            bf.Serialize(file, save);
 
-            file.Close();
+            // save into file
+            string saveString = JsonUtility.ToJson(save);
+
+            System.IO.File.WriteAllText(filePath, saveString);
+
+            //bf.Serialize(file, save);
+
+            //file.Close();
 
             Debug.Log("Game saved");
 
@@ -66,13 +75,19 @@ namespace SaveSystem
         {
             if (File.Exists(Application.persistentDataPath + DIRECTORY))
             {
-                BinaryFormatter bf = new BinaryFormatter();
+                //BinaryFormatter bf = new BinaryFormatter();
 
-                FileStream file = File.Open(Application.persistentDataPath + DIRECTORY, FileMode.Open);
+                //FileStream file = File.Open(Application.persistentDataPath + DIRECTORY, FileMode.Open);
 
-                save = (SaveData) bf.Deserialize(file);
+                string filePath = Application.persistentDataPath + DIRECTORY;
 
-                file.Close();
+                string saveString = System.IO.File.ReadAllText(filePath);
+
+                save = JsonUtility.FromJson<SaveData>(saveString);
+
+                //save = (SaveData) bf.Deserialize(file);
+
+                //file.Close();
             }
             else {
                 NewGame();
