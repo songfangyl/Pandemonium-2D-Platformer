@@ -23,7 +23,8 @@ namespace SkillSystem
         private BaseSkill skill_2;
 
         [SerializeField] private AudioClip defaultSFX;
-        private int skillPoint = 0;
+
+        private int skillPoint;
 
         public void AssignSkill_1(BaseSkill skill)
         {
@@ -35,7 +36,7 @@ namespace SkillSystem
             if (skill.isUnlocked()) 
             {
                 skill_1 = skill;
-                // saveManager.SaveGame();
+                saveManager.SaveGame();
             }
             else
             {
@@ -53,7 +54,7 @@ namespace SkillSystem
             if (skill.isUnlocked())
             { 
                 skill_2 = skill;
-                // saveManager.SaveGame();
+                saveManager.SaveGame();
             }
             else
             {
@@ -80,7 +81,7 @@ namespace SkillSystem
                 {
                     skillPoint --;
                     skill.Unlock();
-                    // saveManager.SaveGame();
+                    saveManager.SaveGame();
                 }
                 else 
                 {
@@ -152,7 +153,7 @@ namespace SkillSystem
         }
           
 
-        void Awake()
+        public void LoadSave()
         {
             skillDictionary = new Dictionary<string, BaseSkill>();
 
@@ -161,18 +162,24 @@ namespace SkillSystem
                 skillDictionary.Add(skill.Name(), skill);
             }
 
-            if (saveManager.save == null)
-                saveManager.LoadGame();
+            // if (saveManager.save == null)
+            //     saveManager.LoadGame();
 
             SaveData save = saveManager.save;
+
+            skillPoint = save.skill_point;
 
             foreach (var skillName in save.unlockedSkill)
             {
                 skillDictionary[skillName].Unlock();
             }
 
-            if (skillDictionary.ContainsKey(save.skill_1)) AssignSkill_1(skillDictionary[save.skill_1]);
-            if (skillDictionary.ContainsKey(save.skill_2)) AssignSkill_2(skillDictionary[save.skill_2]);
+            if (skillDictionary.ContainsKey(save.skill_1)) 
+                skill_1 = skillDictionary[save.skill_1];
+
+            if (skillDictionary.ContainsKey(save.skill_2)) 
+                skill_2 = skillDictionary[save.skill_2];
+            
         }
 
         public BaseSkill GetSkill1()

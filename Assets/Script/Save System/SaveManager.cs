@@ -15,9 +15,10 @@ namespace SaveSystem
     public class SaveManager : ScriptableObject
     {
         
-        private static string DIRECTORY = "/SaveFile.txt";
         
         public SaveData save;
+
+        private string filePath;
 
         [SerializeField] private LevelManager levelManager;
 
@@ -28,11 +29,6 @@ namespace SaveSystem
         public void SaveGame()
         {
 
-            //BinaryFormatter bf = new BinaryFormatter();
-
-            string filePath = Application.persistentDataPath + DIRECTORY;
-
-            //FileStream file = File.Create(Application.persistentDataPath + DIRECTORY);
 
             // create save data    
             SaveData saveData = new SaveData();
@@ -42,7 +38,7 @@ namespace SaveSystem
             save.curr_lvl = levelManager.lvl();
 
             BaseSkill skill1 = skillManager.Skill_1();
-
+        
             save.skill_1 = skill1 == null ? "" : skill1.Name();
 
             BaseSkill skill2 = skillManager.Skill_2();
@@ -61,10 +57,6 @@ namespace SaveSystem
 
             System.IO.File.WriteAllText(filePath, saveString);
 
-            //bf.Serialize(file, save);
-
-            //file.Close();
-
             Debug.Log("Game saved");
 
 
@@ -73,13 +65,8 @@ namespace SaveSystem
 
         public void LoadGame()
         {
-            if (File.Exists(Application.persistentDataPath + DIRECTORY))
+            if (File.Exists(filePath))
             {
-                //BinaryFormatter bf = new BinaryFormatter();
-
-                //FileStream file = File.Open(Application.persistentDataPath + DIRECTORY, FileMode.Open);
-
-                string filePath = Application.persistentDataPath + DIRECTORY;
 
                 string saveString = System.IO.File.ReadAllText(filePath);
 
@@ -87,11 +74,10 @@ namespace SaveSystem
 
                 Debug.Log("Game Loaded");
 
-                //save = (SaveData) bf.Deserialize(file);
-
-                //file.Close();
+                System.IO.File.WriteAllText(Path.Combine(Application.persistentDataPath,"CheckLoad.txt"), saveString);
             }
-            else {
+            else 
+            {
                 NewGame();
             }
         }
@@ -116,11 +102,14 @@ namespace SaveSystem
 
         }
 
-        void Awake()
+       void Awake()
         {
+            filePath = Path.Combine(Application.persistentDataPath, "SaveFile.txt");
             LoadGame();
+            skillManager.LoadSave();
+            questManager.LoadSave();
+            levelManager.LoadSave();
         }
 
     }
 }
-

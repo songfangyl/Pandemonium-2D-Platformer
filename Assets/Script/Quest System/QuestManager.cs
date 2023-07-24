@@ -76,7 +76,7 @@ namespace QuestSystem
             CollectedXP += XP;
         }
 
-        void Awake() 
+        public void LoadSave() 
         {
             questDictionary = new Dictionary<string, Quest>();
 
@@ -85,8 +85,8 @@ namespace QuestSystem
                 questDictionary.Add(quest.Quest_id(), quest);
             }
 
-            if (saveManager.save == null) 
-                saveManager.LoadGame();
+            // if (saveManager.save == null) 
+            //     saveManager.LoadGame();
 
             SaveData save = saveManager.save;
 
