@@ -7,6 +7,6 @@
 ## Documentation
 More details of our project can be found here [Documentation](https://docs.google.com/document/d/1kRmNEKTRozh0VfFDIcuVpsn6Z3ykiVdRruS-WH4xsnA/edit?usp=drive_link)
 
-## Demo
-Demo of the game: 
-[Demo](https://songfangyl.github.io/Orbital-Demo/)
+## Prototype of the Game
+Prototype of the game: 
+The game build will be in the Final build folder of the game, simply clone the Git repo, and click on the .exe application in the Final Build Folder
