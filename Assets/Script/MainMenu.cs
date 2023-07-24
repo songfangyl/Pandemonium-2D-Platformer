@@ -19,7 +19,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    private void Start() {
+    public void Load()
+    {
         saveManager.LoadGame();
     }
+
 }

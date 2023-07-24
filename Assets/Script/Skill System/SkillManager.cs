@@ -23,8 +23,7 @@ namespace SkillSystem
         private BaseSkill skill_2;
 
         [SerializeField] private AudioClip defaultSFX;
-
-        [SerializeField] private int skillPoint = 0;
+        private int skillPoint = 0;
 
         public void AssignSkill_1(BaseSkill skill)
         {
@@ -171,6 +170,9 @@ namespace SkillSystem
             {
                 skillDictionary[skillName].Unlock();
             }
+
+            if (skillDictionary.ContainsKey(save.skill_1)) AssignSkill_1(skillDictionary[save.skill_1]);
+            if (skillDictionary.ContainsKey(save.skill_2)) AssignSkill_2(skillDictionary[save.skill_2]);
         }
 
         public BaseSkill GetSkill1()

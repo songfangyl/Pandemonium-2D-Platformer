@@ -15,7 +15,7 @@ namespace SaveSystem
     public class SaveManager : ScriptableObject
     {
         
-        private static string DIRECTORY = "/SaveFile.dat";
+        private static string DIRECTORY = "/SaveFile.txt";
         
         public SaveData save;
 
@@ -84,6 +84,8 @@ namespace SaveSystem
                 string saveString = System.IO.File.ReadAllText(filePath);
 
                 save = JsonUtility.FromJson<SaveData>(saveString);
+
+                Debug.Log("Game Loaded");
 
                 //save = (SaveData) bf.Deserialize(file);
 
