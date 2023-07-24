@@ -35,7 +35,7 @@ namespace SkillSystem
             if (skill.isUnlocked()) 
             {
                 skill_1 = skill;
-                saveManager.SaveGame();
+                // saveManager.SaveGame();
             }
             else
             {
@@ -53,7 +53,7 @@ namespace SkillSystem
             if (skill.isUnlocked())
             { 
                 skill_2 = skill;
-                saveManager.SaveGame();
+                // saveManager.SaveGame();
             }
             else
             {
@@ -80,7 +80,7 @@ namespace SkillSystem
                 {
                     skillPoint --;
                     skill.Unlock();
-                    saveManager.SaveGame();
+                    // saveManager.SaveGame();
                 }
                 else 
                 {
