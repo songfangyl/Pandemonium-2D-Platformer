@@ -9,4 +9,4 @@ More details of our project can be found here [Documentation](https://docs.googl
 
 ## Prototype of the Game
 Prototype of the game: 
-The game build will be in the Final build folder of the game, simply clone the Git repo, and click on the .exe application in the Final Build Folder
+The game is released on GitHub and is available for download. Click on the release section of the GitHub Repo and proceed to download it.
