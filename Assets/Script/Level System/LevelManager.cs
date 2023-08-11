@@ -65,25 +65,24 @@ namespace Level
 
         // Initialization 
         // need to modify to read save file after implemnting save/load
-        void Awake() 
+        public void LoadSave() 
         {
-            if (saveManager.save == null) 
-                saveManager.LoadGame();
+            // if (saveManager.save == null) 
+            //     saveManager.LoadGame();
 
             SaveData save = saveManager.save;
             
             total_exp = save.total_exp;
             curr_lvl = save.curr_lvl;
-            if (curr_lvl == 0) {
-                curr_lvl = 1;
-            }
+            
         }
 
 
         // Getter
         public int lvl() 
         {
-            if (curr_lvl == 0) curr_lvl = 1;
+            //if (curr_lvl == 0) 
+            // curr_lvl = 1;
             return curr_lvl;
         }
 

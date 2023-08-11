@@ -40,6 +40,12 @@ public class LevelSelector : MonoBehaviour
         questManager.LoadQuest(quest);
     }
     
+    void Update()
+    {
+        if(questManager.canDoQuest(quest)) {
+            button.interactable = true;
+        }
+    }
 
     // Update is called once per frame
 }

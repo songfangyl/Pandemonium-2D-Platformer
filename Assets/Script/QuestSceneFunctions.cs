@@ -19,5 +19,10 @@ public class QuestSceneFunctions : MonoBehaviour
         levelText.text = "Your Level: " + levelManager.lvl();
     }
 
+    void Update()
+    {
+        levelText.text = "Your Level: " + levelManager.lvl();
+    }
+
     
 }
