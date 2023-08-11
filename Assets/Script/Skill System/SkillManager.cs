@@ -35,7 +35,7 @@ namespace SkillSystem
             if (skill.isUnlocked()) 
             {
                 skill_1 = skill;
-                // saveManager.SaveGame();
+                saveManager.SaveGame();
             }
             else
             {
@@ -53,7 +53,7 @@ namespace SkillSystem
             if (skill.isUnlocked())
             { 
                 skill_2 = skill;
-                // saveManager.SaveGame();
+                saveManager.SaveGame();
             }
             else
             {
@@ -80,7 +80,7 @@ namespace SkillSystem
                 {
                     skillPoint --;
                     skill.Unlock();
-                    // saveManager.SaveGame();
+                    saveManager.SaveGame();
                 }
                 else 
                 {
@@ -171,8 +171,8 @@ namespace SkillSystem
                 skillDictionary[skillName].Unlock();
             }
 
-            if (skillDictionary.ContainsKey(save.skill_1)) AssignSkill_1(skillDictionary[save.skill_1]);
-            if (skillDictionary.ContainsKey(save.skill_2)) AssignSkill_2(skillDictionary[save.skill_2]);
+            if (skillDictionary.ContainsKey(save.skill_1)) skill_1 = skillDictionary[save.skill_1];
+            if (skillDictionary.ContainsKey(save.skill_2)) skill_2 = skillDictionary[save.skill_2];
         }
 
         public BaseSkill GetSkill1()
