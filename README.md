@@ -5,7 +5,7 @@
 - [Video](https://drive.google.com/file/d/1se_20FOSRkhcI0VgCJw8KGuY46wSA4Zo/view?usp=drive_link)
 
 ## Documentation
-More details of our project can be found here [Documentation](https://docs.google.com/document/d/100KJ1FK6zqWoqrJv6FxWVGPh2ZF_scCJg1fTDdYRGJM/edit)
+More details of our project can be found here [Documentation](https://docs.google.com/document/d/100KJ1FK6zqWoqrJv6FxWVGPh2ZF_scCJg1fTDdYRGJM/edit?usp=sharing)
 
 ## Prototype of the Game
 Prototype of the game: 
